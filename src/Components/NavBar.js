@@ -1,31 +1,32 @@
-import Nav from 'react-bootstrap/Nav';
+import React from 'react'
+import { FaBars } from 'react-icons/fa';
+import { Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks } from './NavbarElements';
 
 const NavBar = () => {
   return (
-    <Nav
-      activeKey="/home"
-      onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
-    >
-      <Nav.Item>
-        <Nav.Link href="/home">Home</Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link eventKey="link-1">Ceremony</Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link eventKey="link-2">Reception</Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link eventKey="link-3">Accommodations</Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link eventKey="link-4">Registry</Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link eventKey="link-5">RSVP</Nav.Link>
-      </Nav.Item>
-    </Nav>
-  );
+    <>
+      <Nav>
+        <NavbarContainer>
+            <NavLogo to="/">Logo</NavLogo>
+            {/*   <img src="" alt="" /> */}
+            <MobileIcon>
+                <FaBars />
+            </MobileIcon>
+        <NavMenu>
+            <NavItem>
+            <NavLinks to="ceremony" activeStyle>Ceremony</NavLinks>
+            <NavLinks to="/reception" activeStyle>Reception</NavLinks>
+            <NavLinks to="/accommodations" activeStyle>Accommodations</NavLinks>
+            <NavLinks to="/registry" activeStyle>registry</NavLinks>
+            </NavItem>
+        </NavMenu>
+        {/* <NavBtn>
+            <NavBtnLink to="rsvp">RSVP</NavBtnLink>
+        </NavBtn> */}
+        </NavbarContainer>
+      </Nav>
+    </>
+  )
 }
 
-export default NavBar;
+export default NavBar

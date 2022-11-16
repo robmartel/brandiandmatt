@@ -3,6 +3,7 @@
 const CeremonyPage = () => {
     return (
         <>
+        <h1>Ceremony Page</h1>
         </>
     );
 };
