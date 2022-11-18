@@ -2,10 +2,10 @@ import { Routes, Route } from 'react-router-dom';
 import NavBar from './Components/NavBar';
 import Home from './Pages/Home';
 import CeremonyPage from './Pages/CeremonyPage';
+
 function App() {
   return (
     <div>
-      <NavBar />
       <Routes>
         <Route
           path='/'
