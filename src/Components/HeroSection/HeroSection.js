@@ -32,8 +32,8 @@ const HeroSection = () => {
         />
       </HeroBg>
       <HeroContent>
-        <HeroH1>Header goes here</HeroH1>
-        <HeroP>You can put a paragraph here </HeroP>
+        <HeroH1>Brandi & Mathieu</HeroH1>
+        <HeroP>July 22, 2023 </HeroP>
         <HeroBtnWrapper>
           <Button
             to='signup'

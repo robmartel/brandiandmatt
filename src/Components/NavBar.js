@@ -17,13 +17,13 @@ const NavBar = ({toggle}) => {
             <NavLinks to="ceremony" >Ceremony</NavLinks>
             </NavItem>
             <NavItem>
-            <NavLinks to="reception" activeStyle>Reception</NavLinks>
+            <NavLinks to="reception" >Reception</NavLinks>
             </NavItem>
             <NavItem>
-            <NavLinks to="accommodations" activeStyle>Accommodations</NavLinks>
+            <NavLinks to="accommodations" >Accommodations</NavLinks>
             </NavItem>
             <NavItem>
-            <NavLinks to="registry" activeStyle>registry</NavLinks>
+            <NavLinks to="registry" >Registry</NavLinks>
             </NavItem>
         </NavMenu>
         <NavBtn>

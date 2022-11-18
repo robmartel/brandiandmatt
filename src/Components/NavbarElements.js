@@ -1,17 +1,15 @@
 import styled from 'styled-components';
 import { Link as LinkR } from 'react-router-dom';
 import { Link as LinkS } from 'react-scroll';
-import { NavLink as Link } from 'react-router-dom';
-import { FaBars } from 'react-icons/fa';
 
 export const Nav = styled.nav`
 background: #000;
 height: 80px;
-// margin-top: -80px;
+margin-top: -80px;
 display: flex;
 justify-content: center;
 align-items: center;
-font-size: 1 rem;
+font-size: 1.5 rem;
 position: sticky;
 top: 0;
 z-index: 10;
@@ -51,6 +49,7 @@ display: none;
     position: absolute;
     top: 0;
     right: 0;
+    margin-right: 22px;
     transform: translated(-100%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
@@ -79,19 +78,26 @@ color: #fff;
 display: flex;
 align-items: center;
 text-decoration: none;
-padding: 0 1rem;
+padding: 0 1.5rem;
 height: 100%;
+margin-top:0.5rem;
 cursor: pointer;
 
+//the below does not seem to be working
 &.active {
 border-bottom: 3px solid #01bf71;
+}
+
+&:hover {
+    transition: all 0.2s ease-in-out;
+    color: #01bf71;
 }
 `
 
 export const NavBtn = styled.nav`
 display: flex;
 align-items: center;
-// margin-right: 24px;
+margin-right: 24px;
 
 @media screen and (max-width: 768px) {
     display: none;

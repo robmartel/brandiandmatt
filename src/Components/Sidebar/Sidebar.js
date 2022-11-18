@@ -9,10 +9,10 @@ const Sidebar = ({isOpen, toggle}) => {
       </Icon>
       <SidebarWrapper>
         <SidebarMenu>
-            <SidebarLink to="ceremony">Ceremony</SidebarLink>
-            <SidebarLink to="reception">Reception</SidebarLink>
-            <SidebarLink to="accommodations">Accommodations</SidebarLink>
-            <SidebarLink to="registry">Registry</SidebarLink>
+            <SidebarLink to="ceremony" onClick={toggle} >Ceremony</SidebarLink>
+            <SidebarLink to="reception" onClick={toggle} >Reception</SidebarLink>
+            <SidebarLink to="accommodations" onClick={toggle} >Accommodations</SidebarLink>
+            <SidebarLink to="registry" onClick={toggle} >Registry</SidebarLink>
         </SidebarMenu>
         <SideBtnWrap>
             <SidebarRoute to="/rsvp">RSVP</SidebarRoute>
