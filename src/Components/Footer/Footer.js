@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube, FaLinkedin } from 'react-icons/fa';
+import { RiMickeyLine } from 'react-icons/ri';
 import { FooterContainer, FooterWrap, FooterLinksContainer, FooterLinksWrapper, FooterLinkItems, FooterLinkTitle, FooterLink, SocialMedia, SocialMediaWrap, SocialLogo, WebsiteRights, SocialIcons, SocialIconLink } from './FooterElements'
-
 const Footer = () => {
   return (
     <FooterContainer>
@@ -46,8 +46,11 @@ const Footer = () => {
         </FooterLinksContainer>
         <SocialMedia>
             <SocialMediaWrap>
-                <SocialLogo to='/'>Logo</SocialLogo>
-                <WebsiteRights>logo copyright {new Date().getFullYear()} All rights reserved.</WebsiteRights>
+                <SocialLogo to='/'>
+                <RiMickeyLine />
+                </SocialLogo>
+                
+                <WebsiteRights>Rob Martel © {new Date().getFullYear()} All rights reserved.</WebsiteRights>
                 <SocialIcons>
                     <SocialIconLink href='/' target="_blank" aria-label="Facebook">
                     <FaFacebook />
