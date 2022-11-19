@@ -1,10 +1,11 @@
+import React from 'react'
 
+const RSVPPage = () => {
+  return (
+    <div>
+      <h1>Sign In page</h1>
+    </div>
+  )
+}
 
-const RsvpPage = () => {
-    return (
-        <>
-        </>
-    );
-};
-
-export default RsvpPage;
+export default RSVPPage

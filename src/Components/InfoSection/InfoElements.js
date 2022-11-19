@@ -62,7 +62,7 @@ margin-bottom: 16px;
 
 export const Heading = styled.h1`
 margin-bottom: 24px;
-font-size: 48px;
+font-size: 48px; 
 line-height: 1.1;
 font-weight: 600;
 color: ${({lightText}) => (lightText ? '#f7f8fa' : '#010606')};
@@ -77,7 +77,7 @@ max-width: 440px;
 margin-bottom: 35px;
 font-size: 18px;
 line-height: 24px;
-color
+color: ${({darkText}) => (darkText ? '#010606' : '#fff')};
 `
 
 export const BtnWrap = styled.div`
@@ -87,7 +87,7 @@ justify-content: flex-start;
 
 export const ImgWrap = styled.div`
 max-width: 555px;
-height: 100%
+height: 100%;
 `
 
 export const Img = styled.img`
