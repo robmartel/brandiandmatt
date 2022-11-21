@@ -7,24 +7,24 @@ import { ServicesContainer, ServicesH1, ServicesH2, ServicesWrapper, ServicesCar
 const Services = () => {
   return (
     <ServicesContainer id='accommodations'>
-      <ServicesH1>Our Services</ServicesH1>
+      <ServicesH1>Accommodations</ServicesH1>
       <ServicesWrapper>
         <ServicesCard>
           <ServicesIcon src={Icon1} />
-          <ServicesH2>Reduce Expenses</ServicesH2>
+          <ServicesH2>Quattro Hotel</ServicesH2>
           <ServicesP>
-            We help reduce your fees and increase your over revenue.
+            There is a block booked off, for the wedding. 
           </ServicesP>
         </ServicesCard>
         <ServicesCard>
           <ServicesIcon src={Icon2} />
-          <ServicesH2>Virtual Offices</ServicesH2>
-          <ServicesP>Access our platform anywhere in the world.</ServicesP>
+          <ServicesH2>Other Hotels</ServicesH2>
+          <ServicesP>Here are some other hotels in the area.</ServicesP>
         </ServicesCard>
         <ServicesCard>
           <ServicesIcon src={Icon3} />
-          <ServicesH2>Premium Benefits</ServicesH2>
-          <ServicesP>Unlock our premium benefits package.</ServicesP>
+          <ServicesH2>Affordable Options</ServicesH2>
+          <ServicesP>Here are some more affordable options.</ServicesP>
         </ServicesCard>
       </ServicesWrapper>
     </ServicesContainer>
