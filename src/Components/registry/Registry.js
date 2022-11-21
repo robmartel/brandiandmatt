@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Icon } from './RegistryElements';
-import { GiCastle } from 'react-icons/gi';
+import { GiRose } from 'react-icons/gi';
 
 
 const Registry = () => {
@@ -8,7 +8,7 @@ const Registry = () => {
    
    <Container>
    <Icon to='/'>
-            <GiCastle /> 
+            <GiRose /> 
             </Icon>
     </Container>
   )
