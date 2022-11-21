@@ -82,7 +82,9 @@ color: ${({darkText}) => (darkText ? '#010606' : '#fff')};
 
 export const BtnWrap = styled.div`
 display: flex;
-justify-content: flex-start;
+justify-content: space-between;
+margin-right: 60px;
+margin-left: 30px;
 `
 
 export const ImgWrap = styled.div`

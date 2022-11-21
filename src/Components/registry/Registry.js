@@ -1,10 +1,16 @@
-import React from 'react'
+import React from 'react';
+import { Container, Icon } from './RegistryElements';
+import { RiMickeyLine } from 'react-icons/ri';
+
 
 const Registry = () => {
   return (
-    <>
-   <h1>Click Here for the registry</h1>
-    </>
+   
+   <Container>
+   <Icon to='/'>
+            <RiMickeyLine /> 
+            </Icon>
+    </Container>
   )
 }
 
