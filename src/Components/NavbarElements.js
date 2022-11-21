@@ -3,7 +3,7 @@ import { Link as LinkR } from 'react-router-dom';
 import { Link as LinkS } from 'react-scroll';
 
 export const Nav = styled.nav`
-background: ${({scrollNav}) => (scrollNav ? '#000' : 'transparent')};
+background: ${({scrollNav}) => (scrollNav ? 'rgb(3, 165, 252)' : 'transparent')};
 height: 80px;
 margin-top: -80px;
 display: flex;
@@ -83,14 +83,13 @@ height: 100%;
 margin-top:0.5rem;
 cursor: pointer;
 
-//the below does not seem to be working
 &.active {
-border-bottom: 3px solid #01bf71;
+border-bottom: 5px solid rgb(207, 3, 252);
 }
 
 &:hover {
     transition: all 0.2s ease-in-out;
-    color: #01bf71;
+    color: rgb(207, 3, 252);
 }
 `
 
@@ -106,7 +105,7 @@ margin-right: 24px;
 
 export const NavBtnLink = styled(LinkR)`
 border-radius: 50px;
-background: #01bf71;
+background: #fff;
 white-space: nowrap;
 padding: 10px 22px;
 color: #010606;
@@ -119,7 +118,7 @@ text-decoration: none;
 
 &:hover{
     transition: all 0.2s ease-in-out;
-    background: #fff;
+    background: rgb(207, 3, 252);
     color: #010606;
 }
 `;

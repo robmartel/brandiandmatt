@@ -3,21 +3,23 @@ import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
 min-height: 692px;
-position: fixed;
+position: relative;
 bottom: 0;
 left: 0;
 right: 0;
 top: 0;
-z-index: 0;
-overflow: hidden;
-background: linear-gradient(108deg, rgba(1, 147, 86, 1) 0%, rgba(10, 201, 122, 1) 100%);
+z-index: 1;
+overflow: scroll;
+background: linear-gradient(108deg, rgba(3, 165, 252, 1) 0%, rgba(230, 230, 250) 100%);
 `
 
 export const FormWrap = styled.div`
-height: 100%;
+height: 90%;
 display: flex;
 flex-direction: column;
 justify-content: center;
+margin-top: 18px;
+
 
 @media screen and (max-width: 400px) {
     height: 80%;
@@ -63,6 +65,7 @@ box-shadow: 0 1px 3px rgba(0,0,0,0.9);
 
 @media screen and (max-width: 400px) {
     padding: 32px 32px;
+    margin-top: 12px;
 }
 `
 
@@ -88,7 +91,7 @@ border-radius: 4px;
 `
 
 export const FormButton = styled.button`
-background: #01bf71;
+background: rgb(207, 3, 252);
 padding: 16px 0;
 border: none;
 border-radius: 4px;
