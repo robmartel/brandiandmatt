@@ -36,13 +36,13 @@ const HeroSection = () => {
         <HeroP>July 22, 2023 </HeroP>
         <HeroBtnWrapper>
           <Button
-            to='signup'
+            to='/rsvp'
             onMouseEnter={onHover}
             onMouseLeave={onHover}
             primary='true'
             dark='true'
           >
-            Get Started {hover ? <ArrowForward /> : <ArrowRight />}
+            RSVP {hover ? <ArrowForward /> : <ArrowRight />}
           </Button>
         </HeroBtnWrapper>
       </HeroContent>

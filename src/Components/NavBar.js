@@ -32,7 +32,7 @@ const toggleHome = () => {
       <Nav scrollNav={scrollNav}>
         <NavbarContainer>
             <NavLogo to="/" onClick={toggleHome}>
-            <RiMickeyLine />
+            <RiMickeyLine />  
             </NavLogo>
             <MobileIcon onClick={toggle}>
                 <FaBars />
