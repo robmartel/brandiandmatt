@@ -61,7 +61,7 @@ const InfoSection = ({
                     {buttonLabel}
                   </Button>
                   <Button
-                    to='/registry'
+                    to={id==='registry' ? '/registry' : '/rsvp'}
                     smooth={true}
                     duration={500}
                     spy={true}
