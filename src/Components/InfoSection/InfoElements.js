@@ -95,5 +95,6 @@ height: 100%;
 export const Img = styled.img`
 width: 100%;
 margin: 0 0 10px 0;
+height: 355px;
 padding-right: 0;
 `
