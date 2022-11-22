@@ -33,6 +33,7 @@ const InfoSection = ({
   dark,
   dark2
 }) => {
+  
   return (
     <>
       <InfoContainer
@@ -61,7 +62,7 @@ const InfoSection = ({
                     {buttonLabel}
                   </Button>
                   <Button
-                    to={id==='registry' ? '/registry' : '/rsvp'}
+                    to={id==='registry' ? '/registry' : id=== 'ceremony' ? '/ceremony' : id==='reception' ? '/reception' : '/rsvp'}
                     smooth={true}
                     duration={500}
                     spy={true}
