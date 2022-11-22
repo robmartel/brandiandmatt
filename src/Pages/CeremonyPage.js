@@ -1,9 +1,12 @@
+import Ceremony from '../Components/Ceremony/Ceremony';
+import ScrollToTop from '../Components/ScrollToTop';
 
 
 const CeremonyPage = () => {
     return (
         <>
-        <h1>Ceremony Page</h1>
+        <ScrollToTop />
+        <Ceremony />
         </>
     );
 };
