@@ -4,7 +4,7 @@ import HeroSection from '../Components/HeroSection/HeroSection';
 import { homeObjOne, homeObjThree, homeObjTwo } from '../Components/InfoSection/Data';
 import InfoSection from '../Components/InfoSection/InfoSection';
 import NavBar from '../Components/NavBar'
-import Services from '../Components/Services/Services';
+import Services from '../Components/Accommodations/Accommodations';
 import Sidebar from '../Components/Sidebar/Sidebar'
 
 const Home = () => {

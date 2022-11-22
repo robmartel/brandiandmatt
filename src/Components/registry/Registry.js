@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Icon, RegistryPic, RegistryH1, ImgWrapper, Img, RegistryP, ImageLink, RegistryBtn, RegistryBtnLink } from './RegistryElements';
+import { Container, Icon, RegistryPic, RegistryH1, ImgWrapper, Img, RegistryP, RegistryBtn, RegistryBtnLink } from './RegistryElements';
 import { GiRose } from 'react-icons/gi';
 
 const Registry = () => {
@@ -14,10 +14,10 @@ const Registry = () => {
             </RegistryPic>
             <RegistryH1>Registry</RegistryH1>
             <ImgWrapper>
-            <ImageLink to="https://www.amazon.ca/wedding/brandi-martel-mathieu-jacques-sault-ste-marie-july-2023/registry/3KP05CJKWV1KU" target="-blank" rel="external">
+            <a href="https://www.amazon.ca/wedding/brandi-martel-mathieu-jacques-sault-ste-marie-july-2023/registry/3KP05CJKWV1KU" target="_blank" rel="noreferrer">
             <Img src={require('../../images/amazon.png')} alt='image' />
-            </ImageLink>
-            <RegistryP>Click <ImageLink to="https://www.amazon.ca/wedding/brandi-martel-mathieu-jacques-sault-ste-marie-july-2023/registry/3KP05CJKWV1KU" target="-blank" rel="external">here</ImageLink>, or
+            </a>
+            <RegistryP>Click <a href="https://www.amazon.ca/wedding/brandi-martel-mathieu-jacques-sault-ste-marie-july-2023/registry/3KP05CJKWV1KU" target="-blank" rel="noreferrer">here</a>, or
  on the image for Brandi and Matt's Registry Page</RegistryP>
             </ImgWrapper>
             <RegistryBtn>
