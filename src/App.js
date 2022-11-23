@@ -5,6 +5,7 @@ import RegistryPage from './Pages/RegistryPage';
 import CeremonyPage from './Pages/CeremonyPage';
 import ReceptionPage from './Pages/ReceptionPage';
 import RSVPPage from './Pages/RSVPPage';
+import AccommodationsPage from './Pages/AccommodationsPage';
 
 function App() {
   return (
@@ -30,6 +31,10 @@ function App() {
         <Route
         path='/reception'
         element={<ReceptionPage />}
+        />
+         <Route
+        path='/accommodations'
+        element={<AccommodationsPage />}
         />
       </Routes>
       </div>
