@@ -37,7 +37,7 @@ align-items: center;
 top: 32px;
 right: 75px;
 
-@media screen and (max-width: 820px) {
+@media screen and (max-width: 1000px) {
     margin-left: 16px;
     margin-bottom: 60px;
     margin-top: 0;

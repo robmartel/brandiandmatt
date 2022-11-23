@@ -22,7 +22,7 @@ const Rsvp = () => {
                     <FormLabel htmlFor='for' >Additional Comments:</FormLabel>
                     <FormInput type='textarea' placeholder='Please provide any dietary restrictions or additional information' required />
                     <FormButton type='submit'>Submit</FormButton>
-                    <Text>Forgot password</Text>
+                    <Text>Thank You! We look forward to seeing you!</Text>
                 </Form>
             </FormContent>
         </FormWrap>
