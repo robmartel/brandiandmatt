@@ -3,9 +3,13 @@ import Icon3 from '../../images/airbnb.jpeg';
 import Icon2 from '../../images/microtel.jpeg';
 import Icon1 from '../../images/quattro.jpeg';
 import '../../App.css'
-import { ServicesContainer, ServicesH1, ServicesH2, ServicesWrapper, ServicesCard, ServicesIcon, ServicesP } from './AccommodationsElements';
+import { ServicesContainer, ServicesH1, ServicesH2, ServicesWrapper, ServicesCard, ServicesIcon, ServicesP, BtnWrap } from './AccommodationsElements';
+import { Button } from '../ButtonElement';
 
-const Services = () => {
+const Services = ({
+  primary,
+  dark,
+  dark2}) => {
   return (
     <ServicesContainer id='accommodations'>
       <ServicesH1>Accommodations</ServicesH1>
@@ -34,6 +38,21 @@ const Services = () => {
         </ServicesCard>
         </a>
       </ServicesWrapper>
+      <BtnWrap>
+      <Button
+                    to='/accommodations'
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                    exact='true'
+                    offset={-80}
+                    primary={primary ? 1 : 0}
+                    dark={dark ? 1 : 0}
+                    dark2={dark2 ? 1 : 0}
+                  >
+                    {'More Info'}
+                  </Button>
+                </BtnWrap>
     </ServicesContainer>
   );
 };
