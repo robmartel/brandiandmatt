@@ -1,6 +1,6 @@
 import React from 'react';
 import Icon3 from '../../images/airbnb.jpeg';
-import Icon2 from '../../images/gardens.jpeg';
+import Icon2 from '../../images/microtel.jpeg';
 import Icon1 from '../../images/quattro.jpeg';
 import '../../App.css'
 import { ServicesContainer, ServicesH1, ServicesH2, ServicesWrapper, ServicesCard, ServicesIcon, ServicesP } from './AccommodationsElements';
@@ -10,7 +10,7 @@ const Services = () => {
     <ServicesContainer id='accommodations'>
       <ServicesH1>Accommodations</ServicesH1>
       <ServicesWrapper>
-        <a href="https://quattrossm.com/" target='_blank' rel='noreferrer'>
+        <a className="accommodationsTag" href="https://quattrossm.com/" target='_blank' rel='noreferrer'>
         <ServicesCard>
           <ServicesIcon src={Icon1} />
           <ServicesH2>Quattro Hotel</ServicesH2>
@@ -19,12 +19,14 @@ const Services = () => {
           </ServicesP>
         </ServicesCard>
         </a>
+        <a className="accommodationsTag"  href="https://www.wyndhamhotels.com/en-ca/microtel/sault-sainte-marie-ontario/microtel-inn-and-suites-by-wyndham-sault-ste-marie/overview?CID=LC:MT::GGL:RIO:National:45802&iata=00093796" target="_blank" rel='noreferrer'>
         <ServicesCard>
           <ServicesIcon src={Icon2} />
-          <ServicesH2>Other Hotels</ServicesH2>
-          <ServicesP>Here are some other hotels in the area.</ServicesP>
+          <ServicesH2>Microtel Inn by Wyndham</ServicesH2>
+          <ServicesP>Click photo for more info about a stay with Microtel.</ServicesP>
         </ServicesCard>
-        <a href="https://www.airbnb.ca/a/stays/Sault-Ste-Marie--Ontario--Canada?sem_brand_destination_erf=true&c=.pi0.pk355652324_64070011577&localized_ghost=true&gclid=Cj0KCQiAg_KbBhDLARIsANx7wAz5IU_QCWml_dQ4m2iAbW_ch5UPfoWvPvjc6JymqPTDfR01hoXdbv8aAmXMEALw_wcB" target='_blank' rel='noreferrer'>
+        </a>
+        <a className="accommodationsTag" href="https://www.airbnb.ca/a/stays/Sault-Ste-Marie--Ontario--Canada?sem_brand_destination_erf=true&c=.pi0.pk355652324_64070011577&localized_ghost=true&gclid=Cj0KCQiAg_KbBhDLARIsANx7wAz5IU_QCWml_dQ4m2iAbW_ch5UPfoWvPvjc6JymqPTDfR01hoXdbv8aAmXMEALw_wcB" target='_blank' rel='noreferrer'>
         <ServicesCard>
           <ServicesIcon src={Icon3} />
           <ServicesH2>Air BNB</ServicesH2>

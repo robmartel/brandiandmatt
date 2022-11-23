@@ -7,12 +7,12 @@
     padding: 0;
 }
 
-a {
+.accommodationsTag {
     text-decoration: none;
 color: black;
 }
 
-a:hover {
+.accommodationsTag:hover {
 
     color: rgb(207, 3, 252);
 }

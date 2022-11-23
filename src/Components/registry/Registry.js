@@ -14,10 +14,10 @@ const Registry = () => {
             </RegistryPic>
             <RegistryH1>Registry</RegistryH1>
             <ImgWrapper>
-            <a href="https://www.amazon.ca/wedding/brandi-martel-mathieu-jacques-sault-ste-marie-july-2023/registry/3KP05CJKWV1KU" target="_blank" rel="noreferrer">
+            <a className="accommodationsTag" href="https://www.amazon.ca/wedding/brandi-martel-mathieu-jacques-sault-ste-marie-july-2023/registry/3KP05CJKWV1KU" target="_blank" rel="noreferrer">
             <Img src={require('../../images/amazon.png')} alt='image' />
             </a>
-            <RegistryP>Click <a href="https://www.amazon.ca/wedding/brandi-martel-mathieu-jacques-sault-ste-marie-july-2023/registry/3KP05CJKWV1KU" target="-blank" rel="noreferrer">here</a>, or
+            <RegistryP>Click <a className="accommodationsTag" href="https://www.amazon.ca/wedding/brandi-martel-mathieu-jacques-sault-ste-marie-july-2023/registry/3KP05CJKWV1KU" target="-blank" rel="noreferrer">here</a>, or
  on the image for Brandi and Matt's Registry Page</RegistryP>
             </ImgWrapper>
             <RegistryBtn>
