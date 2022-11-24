@@ -1,17 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Icon, RegistryPic, RegistryH1, ImgWrapper, Img, RegistryP, RegistryBtn, RegistryBtnLink } from './RegistryElements';
 import { GiRose } from 'react-icons/gi';
 
 const Registry = () => {
+
+  const [isHovering, setIsHovering] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovering(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovering(false);
+  };
+
   return (
    
    <Container>
    <Icon to='/'>
-            <GiRose /> 
+            <GiRose style={{color: isHovering ? 'red' : 'white'}} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} /> 
             </Icon>
-            <RegistryPic src={require('../../images/brandimatt.jpg')} alt='two people'>
-
-            </RegistryPic>
+            <RegistryPic src={require('../../images/brandimatt.jpg')} alt='two people' />
             <RegistryH1>Registry</RegistryH1>
             <ImgWrapper>
             <a className="accommodationsTag" href="https://www.amazon.ca/wedding/brandi-martel-mathieu-jacques-sault-ste-marie-july-2023/registry/3KP05CJKWV1KU" target="_blank" rel="noreferrer">

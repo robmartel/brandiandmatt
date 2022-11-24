@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FaBars } from 'react-icons/fa';
 import { RiMickeyLine } from 'react-icons/ri';
 import { IconContext } from 'react-icons/lib';
@@ -6,6 +6,16 @@ import { animateScroll as scroll } from 'react-scroll';
 import { Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks, NavBtn, NavBtnLink } from './NavbarPagesElements';
 
 const NavBarPages = ({toggle}) => {
+
+  const [isHovering, setIsHovering] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovering(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovering(false);
+  };
 
 const toggleHome = () => {
   scroll.scrollToTop();
@@ -18,7 +28,7 @@ const toggleHome = () => {
       <Nav>
         <NavbarContainer>
             <NavLogo to="/" onClick={toggleHome}>
-            <RiMickeyLine />  
+            <RiMickeyLine style={{color: isHovering ? 'red' : 'white'}} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} />  
             </NavLogo>
             <MobileIcon onClick={toggle}>
                 <FaBars />

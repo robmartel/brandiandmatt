@@ -7,6 +7,17 @@ import { Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks, 
 
 const NavBar = ({toggle}) => {
 
+  //this state is to change color of mouse icon
+  const [isHovering, setIsHovering] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovering(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovering(false);
+  };
+
 const [scrollNav, setScrollNav] = useState(false);
 
 const changeNav =()=> {
@@ -32,7 +43,7 @@ const toggleHome = () => {
       <Nav scrollNav={scrollNav}>
         <NavbarContainer>
             <NavLogo to="/" onClick={toggleHome}>
-            <RiMickeyLine />  
+            <RiMickeyLine style={{color: isHovering ? 'red' : 'white'}} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}/>  
             </NavLogo>
             <MobileIcon onClick={toggle}>
                 <FaBars />

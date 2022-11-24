@@ -93,6 +93,10 @@ display: flex;
 align-items: center;
 margin-bottom: 16px;
 font-weight: bold;
+
+&:hover {
+    color: red;
+}
 `
 
 export const WebsiteRights = styled.small`
@@ -110,4 +114,8 @@ width: 240px;
 export const SocialIconLink = styled.a`
 color: #fff;
 font-size: 24px;
+
+&:hover {
+    color: rgb(207, 3, 252);
+}
 `

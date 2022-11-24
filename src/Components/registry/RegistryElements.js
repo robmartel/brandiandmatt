@@ -48,6 +48,7 @@ right: 75px;
 
 export const RegistryH1 = styled.h1`
 text-align: center;
+margin-left: 80px;
 font-weight: 700;
 color: white;
 `

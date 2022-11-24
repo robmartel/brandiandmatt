@@ -35,6 +35,10 @@ color: #fff;
 font-weight: 700;
 font-size: 32px;
 
+&:hover {
+    color: red;
+}
+
 @media screen and (max-width: 480px) {
     margin-left: 16px;
     margin-top: 8px;
