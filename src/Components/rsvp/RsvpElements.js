@@ -8,17 +8,18 @@ bottom: 0;
 left: 0;
 right: 0;
 top: 0;
+padding-bottom: 80px;
 z-index: 1;
 overflow: scroll;
 background: linear-gradient(108deg, rgba(3, 165, 252, 1) 0%, rgba(230, 230, 250) 100%);
 `
 
 export const FormWrap = styled.div`
-height: 90%;
+height: 100%;
 display: flex;
 flex-direction: column;
 justify-content: center;
-margin-top: 18px;
+margin-top: 0px;
 
 
 @media screen and (max-width: 400px) {
@@ -52,14 +53,14 @@ justify-content: center;
 `
 
 export const Form = styled.form`
-background: #010101;
+background: linear-gradient(108deg, rgba(207, 3, 252, 1) 0%, rgba(230, 230, 250) 100%);
 max-width: 400px;
 height: auto;
 width: 100%;
 z-index: 1;
 display: grid;
 margin: 0 auto;
-padding: 80px 32px;
+padding: 40px 32px;
 border-radius: 4px;
 box-shadow: 0 1px 3px rgba(0,0,0,0.9);
 
@@ -70,9 +71,17 @@ box-shadow: 0 1px 3px rgba(0,0,0,0.9);
 `
 
 export const FormH1 = styled.h1`
-margin-bottom: 40px;
+margin-bottom: 8px;
 color: #fff;
 font-size: 20px;
+font-weight: 400;
+text-align: center;
+`
+
+export const FormP = styled.p`
+margin-bottom: 26px;
+color: #fff;
+font-size: 12px;
 font-weight: 400;
 text-align: center;
 `
@@ -89,9 +98,22 @@ margin-bottom: 32px;
 border: none;
 border-radius: 4px;
 `
+export const FormSelect = styled.select`
+padding: 16px 16px;
+margin-bottom: 32px;
+border: none;
+border-radius: 4px;
+`
+
+export const FormTextArea = styled.textarea`
+padding: 16px 16px;
+margin-bottom: 32px;
+border: none;
+border-radius: 4px;
+`
 
 export const FormButton = styled.button`
-background: rgb(207, 3, 252);
+background: rgb(3, 165, 252);
 padding: 16px 0;
 border: none;
 border-radius: 4px;
