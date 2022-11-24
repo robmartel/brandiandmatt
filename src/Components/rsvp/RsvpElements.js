@@ -57,7 +57,7 @@ justify-content: center;
 `
 
 export const Form = styled.form`
-background: linear-gradient(108deg, rgba(207, 3, 252, 1) 0%, rgba(230, 230, 250) 100%);
+background: linear-gradient(108deg, rgba(207, 3, 252, 1) 0%, rgba(210, 230, 250) 100%);
 max-width: 400px;
 height: auto;
 width: 100%;
@@ -102,6 +102,29 @@ margin-bottom: 32px;
 border: none;
 border-radius: 4px;
 `
+
+export const FormContainer = styled.div`
+margin-bottom: 16px;
+margin-top: 8px;
+`
+
+export const FormRadio = styled.input`
+float: left;
+width: 15px;
+margin-right: 10px;
+text-align: center;
+cursor: pointer;
+clear: left;
+`
+
+export const FormRadioLabel = styled.label`
+float: left;
+width: 200px;
+color: #fff;
+cursor: pointer;
+margin-top: -5px;
+`
+ 
 export const FormSelect = styled.select`
 padding: 16px 16px;
 margin-bottom: 32px;

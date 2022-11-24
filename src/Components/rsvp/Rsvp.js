@@ -1,6 +1,6 @@
 import React from 'react'
 import { RiMickeyLine } from 'react-icons/ri';
-import { Container, FormWrap, FormSelect, FormTextArea, Icon, FormContent, Form, FormH1, FormP, FormLabel, FormInput, FormButton, Text } from './RsvpElements'
+import { Container, FormContainer, FormRadio, FormRadioLabel, FormWrap, FormSelect, FormTextArea, Icon, FormContent, Form, FormH1, FormP, FormLabel, FormInput, FormButton, Text } from './RsvpElements'
 
 const Rsvp = () => {
   return (
@@ -18,8 +18,18 @@ const Rsvp = () => {
                     <FormInput id='name' type='name' placeholder='Provide full name of all guests attending' required />
                     <FormLabel htmlFor='email' >Email:</FormLabel>
                     <FormInput id='email' type='email' placeholder='elsa@disneycastle.com' required />
+                    <FormLabel htmlFor='attending'>Will you be joining our Magical evening?</FormLabel>
+                    <FormContainer>
+                        <FormRadio id='attendingY' type='radio' name='attending' value='yes' checked></FormRadio>
+                        <FormRadioLabel htmlFor='attendingY'>Wouldn't miss it!</FormRadioLabel>
+                        
+                    </FormContainer>
+                        <FormContainer>
+                        <FormRadio id='attendingN' type='radio' name='attending' value='no'></FormRadio>
+                        <FormRadioLabel htmlFor='attendingN'>Sorry, can't make it</FormRadioLabel>
+                    </FormContainer>
                     <FormLabel htmlFor='plusOne'>Plus One:</FormLabel>
-                    <FormSelect id='plusOne' type='select' name='plusOne' required>
+                    <FormSelect  id='plusOne' type='select' name='plusOne' required>
                     <option>Please select an answer</option>
                     <option value='yes'>Yes, please add a plus one</option>
                     <option value='no'>Just me!</option>  
