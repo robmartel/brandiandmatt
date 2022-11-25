@@ -3,7 +3,7 @@ import { RiMickeyLine } from 'react-icons/ri';
 import { Container, FormContainer, FormRadio, FormRadioLabel, FormWrap, FormSelect, FormTextArea, Icon, FormContent, Form, FormH1, FormP, FormLabel, FormInput, FormButton, Text } from './RsvpElements'
 import emailjs from '@emailjs/browser';
 
-const Rsvp = () => {
+const Rsvp = ({show, handClose}) => {
   const form = useRef();
 
   const sendEmail = (e) => {

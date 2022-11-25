@@ -2,13 +2,13 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
-min-height: 692px;
+//min-height: 692px;
 position: relative;
 bottom: 0;
 left: 0;
 right: 0;
 top: 0;
-padding-bottom: 80px;
+//padding-bottom: 80px;
 z-index: 1;
 overflow: scroll;
 background: linear-gradient(108deg, rgba(3, 165, 252, 1) 0%, rgba(230, 230, 250) 100%);
