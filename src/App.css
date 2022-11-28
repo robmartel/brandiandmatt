@@ -17,5 +17,18 @@ color: black;
     color: rgb(207, 3, 252);
 }
 
+.rsvpModal {
+    margin: auto;
+    padding: 1rem;
+}
+
+.modalHeader {
+    background-color: rgb(3, 165, 252);
+}
+
+.modalBody {
+    background-color: rgb(207, 3, 252);
+}
+
 
 
