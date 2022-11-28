@@ -13,8 +13,8 @@ const Rsvp = ({show, handClose}) => {
     const email = e.target[1].value;
     // const attending = e.target[2].value;
     const attending = state;
-    const plusOne = e.target[3].value;
-    // const plusOne = plusone;
+    // const plusOne = e.target[3].value;
+    const plusOne = plusone;
     const guests = e.target[4].value;
     const guestNumber = e.target[5].value;
     const guest_name = e.target[6].value;
@@ -32,8 +32,10 @@ const Rsvp = ({show, handClose}) => {
         song: song,
         message: message, 
     };
-
-    emailjs.send(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, templateParams, process.env.REACT_APP_PUBLIC_KEY)
+    console.log(" templatedparmas",templateParams);
+     emailjs.send(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, templateParams, process.env.REACT_APP_PUBLIC_KEY)
+    // emailjs.send('service_gd7gbot1', 'template_9pn5aba', templateParams, 'user_T460qcGFHu3WS5K7aV7Yy')
+    
       .then((result) => {
           console.log(result.text);
           e.target.reset();
@@ -60,7 +62,9 @@ const Rsvp = ({show, handClose}) => {
     }else {
       plusOnestate('no')
     }
+    console.log(value);
   }
+ 
   return (
     <>
       <Container>
@@ -79,15 +83,13 @@ const Rsvp = ({show, handClose}) => {
                     <FormLabel htmlFor='attending'>Will you be joining our Magical evening?</FormLabel>
                     <FormContainer>
                         <FormRadio id='attendingY' type='radio' name='attending' value='yes' onClick={onClick}></FormRadio>
-                        <FormRadioLabel htmlFor='attendingY'>Wouldn't miss it!</FormRadioLabel>
-                        
-                    </FormContainer>
-                        <FormContainer>
+                        <FormRadioLabel htmlFor='attendingY'>Wouldn't miss it!</FormRadioLabel>                     
+                  
                         <FormRadio id='attendingN' type='radio' name='attending' value='no' onClick={onClick}></FormRadio>
                         <FormRadioLabel htmlFor='attendingN'>Sorry, can't make it</FormRadioLabel>
                     </FormContainer>
                     <FormLabel htmlFor='plusOne'>Plus One:</FormLabel>
-                    <FormSelect  id='plusOne' type='select' name='plusOne' onClick={onPick} required>
+                    <FormSelect  id='plusOne' type='select' name='plusOne' onChange={onPick} >
                     <option>Please select an answer</option>
                     <option value='yes'>Yes, please add a plus one</option>
                     <option value='no'>Just me!</option>  
