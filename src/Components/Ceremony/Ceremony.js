@@ -1,14 +1,13 @@
 import React from 'react'
 import { RiMickeyLine } from 'react-icons/ri';
 import { Icon } from './CeremonyElements';
+import CarouselFade from './Carousel';
 
 const Ceremony = () => {
   return (
-    <div>
-       <Icon to='/'>
-       <RiMickeyLine />
-            </Icon>
-    </div>
+    <>
+     <CarouselFade />
+    </>
   )
 }
 

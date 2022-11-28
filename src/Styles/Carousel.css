@@ -1,0 +1,38 @@
+
+
+.carouselContainer {
+    width: auto;
+    max-height: 500px;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .carousel {
+    z-index: 0;
+  }
+  
+  #carouselDiv {
+    height: 100%;
+    background-color: black;
+  }
+  
+  #carouselCaptionWhite {
+    background: rgba(34, 34, 34, 0.35);
+    border-radius: 15px;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  
+  @media (max-width: 500px) {
+  
+    #carouselCaptionWhite {
+      font-size: medium;
+      padding: 1%;
+      margin: -2%;
+    }
+  
+    .carouselCaptionHeader {
+      font-size: large;
+    }
+  
+  }

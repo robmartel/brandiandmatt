@@ -2,7 +2,7 @@ import React from 'react';
 import Icon3 from '../../images/airbnb.jpeg';
 import Icon2 from '../../images/microtel.jpeg';
 import Icon1 from '../../images/quattro.jpeg';
-import '../../App.css'
+import '../../Styles/App.css'
 import { ServicesContainer, ServicesH1, ServicesH2, ServicesWrapper, ServicesCard, ServicesIcon, ServicesP, BtnWrap } from './AccommodationsElements';
 import { Button } from '../ButtonElement';
 
