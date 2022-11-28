@@ -94,7 +94,7 @@ const RsvpForm = ({ errors, touched, isValid, dirty }) => {
     const[plusone, plusOnestate] = useState("");
     const onPick = (e) => {
       let{value} = e.target;
-      if(value === 'yes') {
+      if(value=== 'yes') {
         plusOnestate('yes')
       }else {
         plusOnestate('no')
@@ -117,7 +117,7 @@ const RsvpForm = ({ errors, touched, isValid, dirty }) => {
       />
       {/* add the first '&' because if there is no error there is no need for the small tag */}
       {touched.userName && errors.userName && (
-        <small className='text-danger'>{errors.userName}</small>
+        <small className='text-warning'><strong>{errors.userName}</strong></small>
       )}
     </div>
 
@@ -134,7 +134,7 @@ const RsvpForm = ({ errors, touched, isValid, dirty }) => {
         placeholder='mickey@disney.com'
       />
       {touched.email && errors.email && (
-        <small className='text-danger'>{errors.email}</small>
+        <small className='text-warning'><strong>{errors.email}</strong></small>
       )}
     </div>
 
@@ -161,7 +161,7 @@ const RsvpForm = ({ errors, touched, isValid, dirty }) => {
         }
         name='plusOne'
         type='select'
-        onClick={onPick}
+        handleChange={onPick}
       >
         <option value="">Please select an answer</option>
         <option value="yes">Yes, please add a plus one or few</option>
@@ -169,7 +169,7 @@ const RsvpForm = ({ errors, touched, isValid, dirty }) => {
         
       </Field>
       {touched.plusOne && errors.plusOne && (
-        <small className='text-danger'>{errors.plusOne}</small>
+        <small className='text-warning'><strong>{errors.plusOne}</strong></small>
       )}
     </div>
 
@@ -186,16 +186,16 @@ const RsvpForm = ({ errors, touched, isValid, dirty }) => {
         type='select'
       >
         <option value="">Please select an answer</option>
-        <option value="1">Just Me!</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">Too many!</option>
+        <option value="one">Just Me!</option>
+        <option value="two">2</option>
+        <option value="three">3</option>
+        <option value="four">4</option>
+        <option value="five">5</option>
+        <option value="six">Too many!</option>
         
       </Field>
       {touched.guests && errors.guests && (
-        <small className='text-danger'>{errors.guests}</small>
+        <small className='text-warning'><strong>{errors.guests}</strong></small>
       )}
     </div>
 
@@ -213,7 +213,7 @@ const RsvpForm = ({ errors, touched, isValid, dirty }) => {
       />
       {/* add the first '&' because if there is no error there is no need for the small tag */}
       {touched.guest_name && errors.guest_name && (
-        <small className='text-danger'>{errors.guest_name}</small>
+        <small className='text-warning'><strong>{errors.guest_name}</strong></small>
       )}
     </div>
 
@@ -230,7 +230,7 @@ const RsvpForm = ({ errors, touched, isValid, dirty }) => {
         placeholder='Provide a song that will get you up on the dance floor'
       />
       {touched.song && errors.song && (
-        <small className='text-danger'>{errors.song}</small>
+        <small className='text-warning'><strong>{errors.song}</strong></small>
       )}
     </div>
 
@@ -247,7 +247,7 @@ const RsvpForm = ({ errors, touched, isValid, dirty }) => {
         placeholder='Please provide any dietary restrictions or additional information.'
       ></Field>
       {touched.message && errors.message && (
-        <small className='text-danger'>{errors.message}</small>
+        <small className='text-warning'><strong>{errors.message}</strong></small>
       )}
     </div>
 

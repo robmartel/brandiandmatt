@@ -110,6 +110,7 @@ const toggleHome = () => {
           <Modal.Title >RSVP</Modal.Title>
         </Modal.Header>
         <Modal.Body className='modalBody'>
+        <small className='' style={{display: "flex", justifyContent: "center", color: "white"}}>Please submit before January 3, 3449</small>
         <div>
 
 <Formik
@@ -130,13 +131,14 @@ const toggleHome = () => {
   validationSchema={ErrorSchema}
   component={RsvpForm}
 />
+<small className='' style={{display: "flex", justifyContent: "center", color: "white"}}>Thank you for letting us know!</small>
+
 </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
+          <Button variant="secondary" onClick={handleClose} >
             Close
           </Button>
-          <Button variant="primary">Understood</Button>
         </Modal.Footer>
       </Modal>
         </NavbarContainer>
