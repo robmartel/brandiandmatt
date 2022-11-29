@@ -5,7 +5,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import "../../Styles/Carousel.css";
 
 
-const CeremonyInfo = ({ headline, headlineDescription, location, address, startTime, linkLabel1, linkLabel2, link1, link2, img1, img2, img3 }) => {
+const PagesInfo = ({ headline, headlineDescription, location, address, startTime, linkLabel1, linkLabel2, link1, link2, img1, img2, img3 }) => {
   return (
     <div className='ceremonyContainer'>
     <Card style={{ width: '25rem', margin: 'auto', marginBottom: '32px', marginTop: '32px' }}>
@@ -76,4 +76,4 @@ const CeremonyInfo = ({ headline, headlineDescription, location, address, startT
   )
 }
 
-export default CeremonyInfo
+export default PagesInfo

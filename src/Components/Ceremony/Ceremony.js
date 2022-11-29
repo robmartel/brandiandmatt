@@ -1,11 +1,11 @@
 import React from 'react'
-import CeremonyInfo from './CeremonyInfo';
+import PagesInfo from './PagesInfo';
 import { infoObjOne, } from './Data';
 
 const Ceremony = () => {
   return (
     <>
-     <CeremonyInfo {...infoObjOne}/>
+     <PagesInfo {...infoObjOne}/>
     </>
   )
 }
