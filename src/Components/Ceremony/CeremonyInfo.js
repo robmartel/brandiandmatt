@@ -5,7 +5,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import "../../Styles/Carousel.css";
 
 
-const CeremonyInfo = () => {
+const CeremonyInfo = ({ headline, headlineDescription, location, address, startTime, linkLabel1, linkLabel2, link1, link2, img1, img2, img3 }) => {
   return (
     <div className='ceremonyContainer'>
     <Card style={{ width: '25rem', margin: 'auto', marginBottom: '32px', marginTop: '32px' }}>
@@ -17,25 +17,24 @@ const CeremonyInfo = () => {
       <img
         className="d-block w-100"
         style={{ maxHeight: 500 }}
-        src={require("../../images/ring.jpg")}
+        src={img1}
         alt="First slide"
       />
       <Carousel.Caption id='carouselCaptionWhite'>
-        <h3 className='carouselCaptionHeader'>Ceremony</h3>
-        <p>Thomson Farms Cider & Winery</p>
-        <p>4057 Third Line West</p>
+        <h3 className='carouselCaptionHeader'>{headline}</h3>
+        <p>{location}</p>
       </Carousel.Caption>
     </Carousel.Item>
     <Carousel.Item>
       <img
         className="d-block w-100"
         style={{ maxHeight: 500 }}
-        src={require("../../images/brandimatt.jpg")}
+        src={img2}
         alt="Second slide"
       />
 
       <Carousel.Caption id="carouselCaptionWhite">
-        <h3 className="carouselCaptionHeader">Ceremony</h3>
+        <h3 className="carouselCaptionHeader">{headline}</h3>
         <p>Will start at 3p.m. sharp</p>
       </Carousel.Caption>
     </Carousel.Item>
@@ -43,12 +42,12 @@ const CeremonyInfo = () => {
       <img
         className="d-block w-100"
         style={{ maxHeight: 398, }}
-        src={require("../../images/brandimatt2.jpg")}
+        src={img3}
         alt="Third slide"
       />
 
       <Carousel.Caption id="carouselCaptionWhite">
-        <h3 className="carouselCaptionHeader">Ceremony</h3>
+        <h3 className="carouselCaptionHeader">{headline}</h3>
         <p>
           Drinking game of the day will be every time Brandi yells
         </p>
@@ -58,19 +57,19 @@ const CeremonyInfo = () => {
   </div>
   </div>
     <Card.Body>
-      <Card.Title>Ceremony</Card.Title>
+      <Card.Title>{headline}</Card.Title>
       <Card.Text>
-        Brandi and Matt have chosen a great location for the ceremony. If you have any questions please reach out.
+        {headlineDescription}
       </Card.Text>
     </Card.Body>
     <ListGroup className="list-group-flush">
-      <ListGroup.Item>Location: Thomson Farms Cider & Winery</ListGroup.Item>
-      <ListGroup.Item>Address: 4057 Third Line West, Sault Ste Marie, P6A 5K8</ListGroup.Item>
-      <ListGroup.Item>Start Time: 3:00 p.m. </ListGroup.Item>
+      <ListGroup.Item>{location}</ListGroup.Item>
+      <ListGroup.Item>{address}</ListGroup.Item>
+      <ListGroup.Item>{startTime} </ListGroup.Item>
     </ListGroup>
     <Card.Body style={{display: 'flex', justifyContent: 'center'}}>
-      <Card.Link className='cardLinks' href="/">Home Page</Card.Link>
-      <Card.Link className='cardLinks' href="https://www.thomsonfarms.ca/" target="_blank">Thomson Farms</Card.Link>
+      <Card.Link className='cardLinks' href={link1}>{linkLabel1}</Card.Link>
+      <Card.Link className='cardLinks' href={link2} target="_blank">{linkLabel2}</Card.Link>
     </Card.Body>
   </Card>
   </div>
