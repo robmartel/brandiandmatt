@@ -82,10 +82,6 @@ height: 100%;
 margin-top:0.5rem;
 cursor: pointer;
 
-&:active {
-    background-color: black;
-}
-
 &:hover {
     transition: all 0.2s ease-in-out;
     color: rgb(207, 3, 252);
