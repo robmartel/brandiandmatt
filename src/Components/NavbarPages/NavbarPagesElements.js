@@ -46,7 +46,7 @@ display: none;
 @media screen and (max-width: 768px) {
     display: block;
     position: absolute;
-    top: 0;
+    top: 16px;
     right: 0;
     margin-right: 22px;
     transform: translated(-100%, 60%);
@@ -82,8 +82,8 @@ height: 100%;
 margin-top:0.5rem;
 cursor: pointer;
 
-&.active {
-border-bottom: 5px solid rgb(207, 3, 252);
+&:active {
+    background-color: black;
 }
 
 &:hover {

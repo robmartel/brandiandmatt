@@ -1,12 +1,12 @@
 import React from 'react'
-import { RiMickeyLine } from 'react-icons/ri';
-import { Icon } from './CeremonyElements';
 import CarouselFade from './Carousel';
+import CeremonyInfo from './CeremonyInfo';
 
 const Ceremony = () => {
   return (
     <>
      <CarouselFade />
+     <CeremonyInfo />
     </>
   )
 }
