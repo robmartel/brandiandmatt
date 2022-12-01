@@ -5,10 +5,11 @@ import Carousel from 'react-bootstrap/Carousel';
 import "../../Styles/Carousel.css";
 
 
-const PagesInfo = ({ headline, headlineDescription, location, address, startTime, linkLabel1, linkLabel2, link1, link2, img1, img2, img3 }) => {
+
+const PagesInfo = ({ headline, headlineDescription, location, address, startTime, startTimeSharp, linkLabel1, linkLabel2, link1, link2, img1, img2, img3 }) => {
   return (
     <div className='ceremonyContainer'>
-    <Card style={{ width: '25rem', margin: 'auto', marginBottom: '32px', marginTop: '32px' }}>
+    <Card style={{ width: '25rem', maxHeight: 'vh-100', margin: 'auto', marginBottom: '32px', marginTop: '32px' }}>
     {/* <Card.Img variant="top" src={require("../../images/thomson.JPG")} /> */}
     <div id='carouselDiv'>
         <div className='carouselContainer'>
@@ -16,7 +17,7 @@ const PagesInfo = ({ headline, headlineDescription, location, address, startTime
     <Carousel.Item>
       <img
         className="d-block w-100"
-        style={{ maxHeight: 500 }}
+        style={{ maxHeight: 300 }}
         src={img1}
         alt="First slide"
       />
@@ -28,20 +29,20 @@ const PagesInfo = ({ headline, headlineDescription, location, address, startTime
     <Carousel.Item>
       <img
         className="d-block w-100"
-        style={{ maxHeight: 500 }}
+        style={{ maxHeight: 300 }}
         src={img2}
         alt="Second slide"
       />
 
       <Carousel.Caption id="carouselCaptionWhite">
         <h3 className="carouselCaptionHeader">{headline}</h3>
-        <p>Will start at 3p.m. sharp</p>
+        <p>{startTimeSharp}</p>
       </Carousel.Caption>
     </Carousel.Item>
     <Carousel.Item>
       <img
         className="d-block w-100"
-        style={{ maxHeight: 398, }}
+        style={{ maxHeight: 300, }}
         src={img3}
         alt="Third slide"
       />

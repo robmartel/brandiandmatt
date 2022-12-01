@@ -4,7 +4,6 @@ import { RiMickeyLine } from 'react-icons/ri';
 import { IconContext } from 'react-icons/lib';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
-//import Rsvp from './rsvp/Rsvp';
 import { Formik } from 'formik';
 import RsvpForm from './rsvp/RsvpForm';
 import * as Yup from 'yup';
