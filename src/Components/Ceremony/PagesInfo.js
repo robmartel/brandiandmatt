@@ -5,6 +5,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import "../../Styles/Carousel.css";
 
 
+
 const PagesInfo = ({ headline, headlineDescription, location, address, startTime, startTimeSharp, linkLabel1, linkLabel2, link1, link2, img1, img2, img3 }) => {
   return (
     <div className='ceremonyContainer'>
