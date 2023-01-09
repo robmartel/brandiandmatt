@@ -1,48 +1,9 @@
 import React, { useState, useRef } from 'react';
-import { Form, Field } from 'formik';
+import { Form, Field, } from 'formik';
 import emailjs from '@emailjs/browser';
 
-const RsvpForm = ({ errors, touched, isValid, dirty }) => {
-    // const form = useRef(); 
-    // const sendEmail = (e) => {
-    //     e.preventDefault();
-
-    //     console.log(e.target[1].value);
-    //     //set the values inside of variables to use later
-
-    //     const userName = e.target[0].value;
-    //     const email = e.target[1].value;
-    //     const attending = e.target[2].value;
-    //     // const attending = state;
-    //     const plusOne = e.target[3].value;
-    //     // const plusOne = plusOne;
-    //     const guests = e.target[4].value;
-    //     const guest_name = e.target[5].value;
-    //     const song = e.target[6].value;
-    //     const message = e.target[7].value;
-
-    //     let templateParams = {
-    //         userName: userName,
-    //         email: email,
-    //         attending: attending,
-    //         plusOne: plusOne, 
-    //         guests: guests,
-    //         guest_name: guest_name,
-    //         song: song,
-    //         message: message, 
-    //     };
-
-    //     emailjs.send(  process.env.REACT_APP_SERVICE_ID,
-    //         process.env.REACT_APP_TEMPLATE_ID,
-    //         templateParams,
-    //         process.env.REACT_APP_PUBLIC_KEY)
-    //         .then((result) => {
-    //             console.log(result.text);
-    //             e.target.reset();
-    //         }, (error) => {
-    //             console.log(error.text);
-    //         })
-    // }
+const RsvpForm = ({ errors, touched, isValid, dirty, }) => {
+ 
     const form = useRef();
 
     const sendEmail = (e) => {
@@ -50,9 +11,7 @@ const RsvpForm = ({ errors, touched, isValid, dirty }) => {
   
       const userName = e.target[0].value;
       const email = e.target[1].value;
-      // const attending = e.target[2].value;
       const attending = state;
-      // const plusOne = e.target[3].value;
       const plusOne = plusone;
       const guests = e.target[4].value;
       const guestNumber = e.target[5].value;
@@ -93,11 +52,12 @@ const RsvpForm = ({ errors, touched, isValid, dirty }) => {
   
     const[plusone, plusOnestate] = useState("");
     const onPick = (e) => {
-      let{value} = e.target;
-      if(value=== 'yes') {
-        plusOnestate('yes')
-      }else {
+      let {value} = e.target;
+      // plusOnestate(value);
+      if(value === 'no') {
         plusOnestate('no')
+      }else {
+        plusOnestate('yes')
       }
     }
   return (
@@ -153,7 +113,7 @@ const RsvpForm = ({ errors, touched, isValid, dirty }) => {
     <div className='form-group'>
       <label className='col-form-label'>Plus One:</label>
       <Field
-        as='select'
+        component='select'
         className={
           touched.plusOne
             ? `form-control ${errors.plusOne ? 'invalid' : 'valid'}`
@@ -161,7 +121,9 @@ const RsvpForm = ({ errors, touched, isValid, dirty }) => {
         }
         name='plusOne'
         type='select'
-        handleChange={onPick}
+        // onChange={(e) => setFieldValue('plusOne', e.target.value)}
+        // onChange={handleChange}
+        onClick={onPick} // still only gives a value of yes 
       >
         <option value="">Please select an answer</option>
         <option value="yes">Yes, please add a plus one or few</option>

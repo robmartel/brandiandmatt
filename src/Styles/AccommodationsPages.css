@@ -12,6 +12,10 @@
     margin-bottom: 2rem;;
 }
 
+.accommodationsTitle {
+    font-weight: 700;
+}
+
 .accommodationsCardContainer {
     margin: 1.5rem;
 }

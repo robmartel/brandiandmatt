@@ -17,7 +17,7 @@ const AccommodationsPages = () => {
       <Card>
         <Card.Img className='accommodationsIcon' variant="top" src={Icon1} />
         <Card.Body>
-          <Card.Title>Quattro Hotel</Card.Title>
+          <Card.Title className='accommodationsTitle'>Quattro Hotel</Card.Title>
           <Card.Text>
             We have kindly booked a block. Reservations must be made before xyz date, click on the booking information tab below for more information.
           </Card.Text>
@@ -45,13 +45,13 @@ const AccommodationsPages = () => {
     </Accordion>
         </Card.Body>
         <Card.Footer>
-          <small className="text-muted">Last updated 3 mins ago</small>
+          {/* <small className="text-muted">Last updated 3 mins ago</small> */}
         </Card.Footer>
       </Card>
       <Card>
         <Card.Img className='accommodationsIcon' variant="top" src={Icon2} />
         <Card.Body>
-          <Card.Title>Microtel Inn & Suites by Wyndham</Card.Title>
+          <Card.Title className='accommodationsTitle'>Microtel Inn & Suites by Wyndham</Card.Title>
           <Card.Text>
           We have kindly booked a block. Reservations must be made before xyz date, click on the booking information tab below for more information.
           </Card.Text>
@@ -79,14 +79,14 @@ const AccommodationsPages = () => {
       </Accordion.Item>
     </Accordion>
         </Card.Body>
-        <Card.Footer>
+        {/* <Card.Footer>
           <small className="text-muted">Last updated 3 mins ago</small>
-        </Card.Footer>
+        </Card.Footer> */}
       </Card>
       <Card>
         <Card.Img className='accommodationsIcon' variant="top" src={Icon3} />
         <Card.Body>
-          <Card.Title>AirBnB Sault Ste Marie</Card.Title>
+          <Card.Title className='accommodationsTitle'>AirBnB Sault Ste Marie</Card.Title>
           <Card.Text>
            If you are looking for something different, and something other than a traditional hotel, feel free to look at some of the great AirBnB stays available.
           </Card.Text>
@@ -99,9 +99,9 @@ const AccommodationsPages = () => {
       </Accordion.Item>
     </Accordion>
         </Card.Body>
-        <Card.Footer>
+        {/* <Card.Footer>
           <small className="text-muted">Last updated 3 mins ago</small>
-        </Card.Footer>
+        </Card.Footer> */}
       </Card>
     </CardGroup>
     </div>
