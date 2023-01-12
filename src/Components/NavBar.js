@@ -6,7 +6,6 @@ import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import { Formik } from 'formik';
 import RsvpForm from './rsvp/RsvpForm';
-import * as Yup from 'yup';
 import { animateScroll as scroll } from 'react-scroll';
 import { Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks, NavBtn, NavBtnLink } from './NavbarElements';
 
@@ -98,13 +97,15 @@ const toggleHome = () => {
         <NavBtn>
             <NavBtnLink onClick={handleShow}>RSVP</NavBtnLink>
         </NavBtn>
-
+        
         <Modal
         show={show}
         onHide={handleClose}
         backdrop="static"
         keyboard={false}
       >
+    
+        
         <Modal.Header className='modalHeader text-light' closeButton>
           <Modal.Title >RSVP</Modal.Title>
         </Modal.Header>
@@ -114,27 +115,13 @@ const toggleHome = () => {
 
 <Formik
   className="bookingCredentials"
-  // initialValues={{
-  //   userName: '', //this needs to be the same as the 'name' in ContactForm, if you add a value here it acts as a placeholder
-  //   //age: '',
-  //   email: '',
-  //   attending: '',
-  //   plusOne: '',
-  //   guests: '',
-  //   guest_name: '',
-  //   song: '',
-  //   message: '',
-    
-  // }}
-
-  // validationSchema={ErrorSchema}
   component={RsvpForm}
 />
 <small className='' style={{display: "flex", justifyContent: "center", color: "white"}}>Thank you, we look forward to getting your gift!</small>
 
 </div>
         </Modal.Body>
-        <Modal.Footer>
+        <Modal.Footer className="modalFooter">
           <Button variant="secondary" onClick={handleClose} >
             Close
           </Button>

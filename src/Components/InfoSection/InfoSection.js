@@ -1,5 +1,8 @@
-import React from 'react';
-import { Button } from '../ButtonElement';
+import React, { useState } from 'react';
+import { Button, ModalButton } from '../ButtonElement';
+import Modal from 'react-bootstrap/Modal';
+import { Formik } from 'formik';
+import RsvpForm from '../../Components/rsvp/RsvpForm';
 import {
   InfoContainer,
   InfoWrapper,
@@ -33,6 +36,11 @@ const InfoSection = ({
   dark,
   dark2
 }) => {
+
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   
   return (
     <>
@@ -49,7 +57,7 @@ const InfoSection = ({
                 <Subtitle darkText={darkText}>{description}</Subtitle>
                 <BtnWrap>
                   <Button
-                    to='/rsvp'
+                    onClick={handleShow}
                     smooth={true}
                     duration={500}
                     spy={true}
@@ -61,6 +69,35 @@ const InfoSection = ({
                   >
                     {buttonLabel}
                   </Button>
+
+                  <Modal
+        show={show}
+        onHide={handleClose}
+        backdrop="static"
+        keyboard={false}
+      >
+        <Modal.Header className='modalHeader text-light' closeButton>
+          <Modal.Title >RSVP</Modal.Title>
+        </Modal.Header>
+        <Modal.Body className='modalBody'>
+        <small className='' style={{display: "flex", justifyContent: "center", color: "white"}}>Please submit before January 3, 3449</small>
+        <div>
+
+<Formik
+  className="bookingCredentials"
+  component={RsvpForm}
+/>
+<small className='' style={{display: "flex", justifyContent: "center", color: "white"}}>Thank you for letting us know!</small>
+
+</div>
+        </Modal.Body>
+        <Modal.Footer className="modalFooter">
+          <ModalButton variant="secondary" onClick={handleClose} >
+            Close
+          </ModalButton>
+        </Modal.Footer>
+      </Modal>
+
                   <Button
                     to={id==='registry' ? '/registry' : id=== 'ceremony' ? '/ceremony' : id==='reception' ? '/reception' : '/rsvp'}
                     smooth={true}

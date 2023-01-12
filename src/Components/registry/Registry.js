@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import { Container, Icon, RegistryPic, RegistryH1, ImgWrapper, Img, RegistryP, RegistryBtn, RegistryBtnLink } from './RegistryElements';
 import { GiRose } from 'react-icons/gi';
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
+import { Formik } from 'formik';
+import RsvpForm from '../rsvp/RsvpForm';
 
 const Registry = () => {
 
@@ -13,6 +17,11 @@ const Registry = () => {
   const handleMouseLeave = () => {
     setIsHovering(false);
   };
+
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   return (
    
@@ -30,8 +39,36 @@ const Registry = () => {
  on the image for Brandi and Matt's Registry Page</RegistryP>
             </ImgWrapper>
             <RegistryBtn>
-              <RegistryBtnLink to="/rsvp">RSVP</RegistryBtnLink>
+              <RegistryBtnLink onClick={handleShow}>RSVP</RegistryBtnLink>
             </RegistryBtn>
+
+            <Modal
+        show={show}
+        onHide={handleClose}
+        backdrop="static"
+        keyboard={false}
+      >
+        <Modal.Header className='modalHeader text-light' closeButton>
+          <Modal.Title >RSVP</Modal.Title>
+        </Modal.Header>
+        <Modal.Body className='modalBody'>
+        <small className='' style={{display: "flex", justifyContent: "center", color: "white"}}>Please submit before January 3, 3449</small>
+        <div>
+
+<Formik
+  className="bookingCredentials"
+  component={RsvpForm}
+/>
+<small className='' style={{display: "flex", justifyContent: "center", color: "white"}}>Thank you for letting us know!</small>
+
+</div>
+        </Modal.Body>
+        <Modal.Footer className="modalFooter">
+          <Button variant="secondary" onClick={handleClose} >
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
 
     </Container>
   )

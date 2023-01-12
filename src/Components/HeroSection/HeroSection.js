@@ -11,7 +11,11 @@ import {
   ArrowForward,
   ArrowRight,
 } from './HeroElements';
-import { Button } from '../ButtonElement';
+import { Button, ModalButton } from '../ButtonElement';
+import RsvpForm from '../rsvp/RsvpForm';
+import Modal from 'react-bootstrap/Modal';
+import { Formik } from 'formik';
+
 
 const HeroSection = () => {
   const [hover, setHover] = useState(false);
@@ -19,6 +23,11 @@ const HeroSection = () => {
   const onHover = () => {
     setHover(!hover);
   };
+
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   return (
     <HeroContainer id='home'>
@@ -36,7 +45,7 @@ const HeroSection = () => {
         <HeroP>July 22, 2023 </HeroP>
         <HeroBtnWrapper>
           <Button
-            to='/rsvp'
+            onClick={handleShow}
             onMouseEnter={onHover}
             onMouseLeave={onHover}
             primary='true'
@@ -44,6 +53,34 @@ const HeroSection = () => {
           >
             RSVP {hover ? <ArrowForward /> : <ArrowRight />}
           </Button>
+          <Modal
+        show={show}
+        onHide={handleClose}
+        backdrop="static"
+        keyboard={false}
+      >
+        <Modal.Header className='modalHeader text-light' closeButton>
+          <Modal.Title >RSVP</Modal.Title>
+        </Modal.Header>
+        <Modal.Body className='modalBody'>
+        <small className='' style={{display: "flex", justifyContent: "center", color: "white"}}>Please submit before January 3, 3449</small>
+        <div>
+
+<Formik
+  className="bookingCredentials"
+ 
+  component={RsvpForm}
+/>
+<small className='' style={{display: "flex", justifyContent: "center", color: "white"}}>Thank you for letting us know!</small>
+
+</div>
+        </Modal.Body>
+        <Modal.Footer className="modalFooter">
+          <ModalButton variant="secondary" onClick={handleClose} >
+            Close
+          </ModalButton>
+        </Modal.Footer>
+      </Modal>
         </HeroBtnWrapper>
       </HeroContent>
     </HeroContainer>
