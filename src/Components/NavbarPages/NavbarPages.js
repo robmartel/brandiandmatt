@@ -6,7 +6,6 @@ import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import { Formik } from 'formik'; 
 import RsvpForm from '../../Components/rsvp/RsvpForm';
-import * as Yup from 'yup';
 import { animateScroll as scroll } from 'react-scroll';
 import { Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks, NavBtn, NavBtnLink } from './NavbarPagesElements';
 
@@ -119,7 +118,7 @@ const handleShow = () => setShow(true);
 
 </div>
         </Modal.Body>
-        <Modal.Footer>
+        <Modal.Footer className="modalFooter">
           <Button variant="secondary" onClick={handleClose} >
             Close
           </Button>
