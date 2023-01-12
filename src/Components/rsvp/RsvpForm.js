@@ -1,230 +1,278 @@
-import React, { useState, useRef } from 'react';
-import { Form, Field, } from 'formik';
+import React from 'react';
+import { useFormik, Form, Field } from 'formik';
+import { ErrorSchema } from './validateForm';
+
 import emailjs from '@emailjs/browser';
 
-const RsvpForm = ({ errors, touched, isValid, dirty, }) => {
- 
-    const form = useRef();
+const RsvpForm = () => {
+  
+  const {
+    handleChange,
+    errors,
+    handleSubmit,
+    values,
+    handleBlur,
+    touched,
+    isValid,
+    dirty,
+    handleReset
+  } = useFormik({
+    initialValues: {
+      userName: '',
+      email: '',
+      attending: '',
+      plusOne: '',
+      guests: '',
+      guest_name: '',
+      song: '',
+      message: '',
+    },
 
-    const sendEmail = (e) => {
-      e.preventDefault();
-  
-      const userName = e.target[0].value;
-      const email = e.target[1].value;
-      const attending = state;
-      const plusOne = plusone;
-      const guests = e.target[4].value;
-      const guestNumber = e.target[5].value;
-      const guest_name = e.target[6].value;
-      const song = e.target[7].value;
-      const message = e.target[8].value;
-  
-      let templateParams = {
-          userName: userName,
-          email: email,
-          attending: attending,
-          plusOne: plusOne, 
-          guests: guests,
-          guestNumber: guestNumber,
-          guest_name: guest_name,
-          song: song,
-          message: message, 
-      };
-  
-      emailjs.send(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, templateParams, process.env.REACT_APP_PUBLIC_KEY)
-        .then((result) => {
+    validationSchema: ErrorSchema,
+    onSubmit: (values) => {
+      emailjs
+        .send(
+          process.env.REACT_APP_SERVICE_ID,
+          process.env.REACT_APP_TEMPLATE_ID,
+          values,
+          process.env.REACT_APP_PUBLIC_KEY
+        )
+
+        .then(
+          (result) => {
             console.log(result.text);
-            e.target.reset();
-        }, (error) => {
+            handleReset();
+          },
+          (error) => {
             console.log(error.text);
-        });
-    };
-  
-    const[state, attendingState] = useState("");
-    const onClick = (e) => {
-      let{value} = e.target;
-      if(value=== 'yes') {
-        attendingState('yes')
-      }else {
-        attendingState('no')
-      }
-    }
-  
-    const[plusone, plusOnestate] = useState("");
-    const onPick = (e) => {
-      let {value} = e.target;
-      // plusOnestate(value);
-      if(value === 'no') {
-        plusOnestate('no')
-      }else {
-        plusOnestate('yes')
-      }
-    }
+          }
+        );
+    },
+  });
+
   return (
-    <Form ref={form} onSubmit={sendEmail}>
+    <Form onSubmit={handleSubmit}>
+      <div className='form-group'>
+        <label className='col-form-label'>Name:</label>
 
-    <div className='form-group'>
-      <label className='col-form-label'>Name:</label>
-      <Field
-        className={
-          touched.userName
-            ? `form-control ${errors.userName ? 'invalid' : 'valid'}`
-            : `form-control`
-        }
-        name='userName'
-        type='text'
-        placeholder='Full Name'
-      />
-      {/* add the first '&' because if there is no error there is no need for the small tag */}
-      {touched.userName && errors.userName && (
-        <small className='text-warning'><strong>{errors.userName}</strong></small>
-      )}
-    </div>
+        {/* Name Field */}
+        <Field
+          className={
+            touched.userName
+              ? `form-control ${errors.userName ? 'invalid' : 'valid'}`
+              : `form-control`
+          }
+          name='userName'
+          type='text'
+          placeholder='Full Name'
+          onChange={handleChange}
+          onBlur={handleBlur}
+          value={values.userName}
+        />
+        {/* add the first '&' because if there is no error there is no need for the small tag */}
+        {touched.userName && errors.userName && (
+          <small className='text-light'>
+            <strong>{errors.userName}</strong>
+          </small>
+        )}
+      </div>
 
-    <div className='form-group'>
-      <label className='col-form-label'>Email:</label>
-      <Field
-        className={
-          touched.email
-            ? `form-control ${errors.email ? 'invalid' : 'valid'}`
-            : `form-control`
-        }
-        name='email'
-        type='text'
-        placeholder='mickey@disney.com'
-      />
-      {touched.email && errors.email && (
-        <small className='text-warning'><strong>{errors.email}</strong></small>
-      )}
-    </div>
+        {/* Email Field */}
+      <div className='form-group'>
+        <label className='col-form-label'>Email:</label>
+        <Field
+          className={
+            touched.email
+              ? `form-control ${errors.email ? 'invalid' : 'valid'}`
+              : `form-control`
+          }
+          name='email'
+          type='text'
+          placeholder='mickey@disney.com'
+          onChange={handleChange}
+          onBlur={handleBlur}
+          value={values.email}
+        />
+        {touched.email && errors.email && (
+          <small className='text-light'>
+            <strong>{errors.email}</strong>
+          </small>
+        )}
+      </div>
 
-    <div className='form-group'>
-    <label className='col-form-label'>Will you be joining our Magical day?</label><br/>
-    <Field  id='attendingY' type="radio" name="attending" value="yes" onClick={onClick}/>
-        <label htmlFor='attendingY' className='col-form-label ps-2 pe-3'>
-        Wouldn't Miss It!
+          {/* Attending Field */}
+      <div className='form-group'>
+        <label className='col-form-label'>
+          Will you be joining our Magical day?
         </label>
-        <Field id='attendingN' type="radio" name="attending" value="no" onClick={onClick} />
-        <label htmlFor='attendingN' className='col-form-label ps-2'>
-            Sorry, maybe next time 
+        <Field
+          component='select'
+          className={
+            touched.attending
+              ? `form-control ${errors.attending ? 'invalid' : 'valid'}`
+              : `form-control`
+          }
+          name='attending'
+          type='select'
+          value={values.attending}
+          onChange={handleChange}
+          onBlur={handleBlur}
+          style={{ display: 'block' }}
+        >
+          <option value=''>Please select an answer</option>
+          <option value='yes'>Wouldn't miss it! (Yes)</option>
+          <option value='no'>Sorry, maybe next time (Hell no)</option>
+        </Field>
+        {touched.attending && errors.attending && (
+          <small className='text-light'>
+            <strong>{errors.attending}</strong>
+          </small>
+        )}
+      </div>
+
+          {/* Plus One Field */}
+      <div className='form-group'>
+        <label className='col-form-label'>Plus One:</label>
+        <Field
+          component='select'
+          className={
+            touched.plusOne
+              ? `form-control ${errors.plusOne ? 'invalid' : 'valid'}`
+              : `form-control`
+          }
+          name='plusOne'
+          type='select'
+          value={values.plusOne}
+          onChange={handleChange}
+          onBlur={handleBlur}
+          style={{ display: 'block' }}
+        >
+          <option value=''>Please select an answer</option>
+          <option value='yes'>Yes, please add a plus one or few</option>
+          <option value='no'>Just me!</option>
+        </Field>
+        {touched.plusOne && errors.plusOne && (
+          <small className='text-light'>
+            <strong>{errors.plusOne}</strong>
+          </small>
+        )}
+      </div>
+
+          {/* Number of Guests Field */}
+      <div className='form-group'>
+        <label className='col-form-label'>
+          Total number of Guests attending:
         </label>
-    </div>
+        <Field
+          as='select'
+          className={
+            touched.guests
+              ? `form-control ${errors.guests ? 'invalid' : 'valid'}`
+              : `form-control`
+          }
+          name='guests'
+          type='select'
+          onChange={handleChange}
+          onBlur={handleBlur}
+          value={values.guests}
+        >
+          <option value=''>Please select an answer</option>
+          <option value='one'>Just Me!</option>
+          <option value='two'>2</option>
+          <option value='three'>3</option>
+          <option value='four'>4</option>
+          <option value='five'>5</option>
+          <option value='six'>Too many!</option>
+        </Field>
+        {touched.guests && errors.guests && (
+          <small className='text-light'>
+            <strong>{errors.guests}</strong>
+          </small>
+        )}
+      </div>
 
-    <div className='form-group'>
-      <label className='col-form-label'>Plus One:</label>
-      <Field
-        component='select'
-        className={
-          touched.plusOne
-            ? `form-control ${errors.plusOne ? 'invalid' : 'valid'}`
-            : `form-control`
-        }
-        name='plusOne'
-        type='select'
-        // onChange={(e) => setFieldValue('plusOne', e.target.value)}
-        // onChange={handleChange}
-        onClick={onPick} // still only gives a value of yes 
-      >
-        <option value="">Please select an answer</option>
-        <option value="yes">Yes, please add a plus one or few</option>
-        <option value="no">Just me!</option>
-        
-      </Field>
-      {touched.plusOne && errors.plusOne && (
-        <small className='text-warning'><strong>{errors.plusOne}</strong></small>
-      )}
-    </div>
+          {/* Guest Names Field */}
+      <div className='form-group'>
+        <label className='col-form-label'>Name(s):</label>
+        <Field
+          className={
+            touched.guest_name
+              ? `form-control ${errors.guest_name ? 'invalid' : 'valid'}`
+              : `form-control`
+          }
+          name='guest_name'
+          type='text'
+          placeholder='Please enter full name for all attending guests'
+          onChange={handleChange}
+          onBlur={handleBlur}
+          value={values.guest_name}
+        />
+        {touched.guest_name && errors.guest_name && (
+          <small className='text-light'>
+            <strong>{errors.guest_name}</strong>
+          </small>
+        )}
+      </div>
 
-    <div className='form-group'>
-      <label className='col-form-label'>Total number of Guests attending:</label>
-      <Field
-        as='select'
-        className={
-          touched.guests
-            ? `form-control ${errors.guests ? 'invalid' : 'valid'}`
-            : `form-control`
-        }
-        name='guests'
-        type='select'
-      >
-        <option value="">Please select an answer</option>
-        <option value="one">Just Me!</option>
-        <option value="two">2</option>
-        <option value="three">3</option>
-        <option value="four">4</option>
-        <option value="five">5</option>
-        <option value="six">Too many!</option>
-        
-      </Field>
-      {touched.guests && errors.guests && (
-        <small className='text-warning'><strong>{errors.guests}</strong></small>
-      )}
-    </div>
+          {/* Song Field */}
+      <div className='form-group'>
+        <label className='col-form-label'>Song:</label>
+        <Field
+          className={
+            touched.song
+              ? `form-control ${errors.song ? 'invalid' : 'valid'}`
+              : `form-control`
+          }
+          name='song'
+          type='text'
+          placeholder='Provide a song that will get you up on the dance floor'
+          onChange={handleChange}
+          onBlur={handleBlur}
+          value={values.song}
+        />
+        {touched.song && errors.song && (
+          <small className='text-light'>
+            <strong>{errors.song}</strong>
+          </small>
+        )}
+      </div>
 
-    <div className='form-group'>
-      <label className='col-form-label'>Name(s):</label>
-      <Field
-        className={
-          touched.guest_name
-            ? `form-control ${errors.guest_name ? 'invalid' : 'valid'}`
-            : `form-control`
-        }
-        name='guest_name'
-        type='text'
-        placeholder='Please enter full name for all attending guests'
-      />
-      {/* add the first '&' because if there is no error there is no need for the small tag */}
-      {touched.guest_name && errors.guest_name && (
-        <small className='text-warning'><strong>{errors.guest_name}</strong></small>
-      )}
-    </div>
+          {/* Additional Comments Field */}
+      <div className='form-group'>
+        <label className='col-form-label'>Additional Comments:</label>
+        <Field
+          as='textarea'
+          className={
+            touched.message
+              ? `form-control ${errors.message ? 'invalid' : 'valid'}`
+              : `form-control`
+          }
+          name='message'
+          placeholder='Please provide any dietary restrictions or additional information.'
+          onChange={handleChange}
+          onBlur={handleBlur}
+          value={values.message}
+        ></Field>
+        {touched.message && errors.message && (
+          <small className='text-light'>
+            <strong>{errors.message}</strong>
+          </small>
+        )}
+      </div>
 
-    <div className='form-group'>
-      <label className='col-form-label'>Song:</label>
-      <Field
-        className={
-          touched.song
-            ? `form-control ${errors.song ? 'invalid' : 'valid'}`
-            : `form-control`
-        }
-        name='song'
-        type='text'
-        placeholder='Provide a song that will get you up on the dance floor'
-      />
-      {touched.song && errors.song && (
-        <small className='text-warning'><strong>{errors.song}</strong></small>
-      )}
-    </div>
-
-    <div className='form-group'>
-      <label className='col-form-label'>Additional Comments:</label>
-      <Field
-        as='textarea'
-        className={
-          touched.message
-            ? `form-control ${errors.message ? 'invalid' : 'valid'}`
-            : `form-control`
-        }
-        name='message'
-        placeholder='Please provide any dietary restrictions or additional information.'
-      ></Field>
-      {touched.message && errors.message && (
-        <small className='text-warning'><strong>{errors.message}</strong></small>
-      )}
-    </div>
-
-    <div className='text-center'>
-      <button
-        className='btn btn-primary my-3'
-        disabled={!isValid || !dirty}
-        type='submit'
-        value="Send"
-      >
-        Submit
-      </button>
-    </div>
-  </Form>
+          {/* Submit Button Field */}
+      <div className='text-center'>
+        <button
+          className='btn btn-primary my-3'
+          disabled={!isValid || !dirty}
+          type='submit'
+          value='Send'
+        >
+          Submit
+        </button>
+      </div>
+    </Form>
   );
-}
+};
 
 export default RsvpForm;
