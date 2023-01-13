@@ -15,7 +15,7 @@ const AccommodationsPages = () => {
     <div className='accommodationsCardContainer'>
     <CardGroup>
       <Card>
-        <Card.Img className='accommodationsIcon' variant="top" src={Icon1} />
+        <Card.Img className='accommodationsIcon mx-auto'  src={Icon1} roundedCircle />
         <Card.Body>
           <Card.Title className='accommodationsTitle'>Quattro Hotel</Card.Title>
           <Card.Text>
@@ -49,7 +49,7 @@ const AccommodationsPages = () => {
         </Card.Footer>
       </Card>
       <Card>
-        <Card.Img className='accommodationsIcon' variant="top" src={Icon2} />
+        <Card.Img className='accommodationsIcon mx-auto' src={Icon2} roundedCircle />
         <Card.Body>
           <Card.Title className='accommodationsTitle'>Microtel Inn & Suites by Wyndham</Card.Title>
           <Card.Text>
@@ -84,7 +84,7 @@ const AccommodationsPages = () => {
         </Card.Footer> */}
       </Card>
       <Card>
-        <Card.Img className='accommodationsIcon' variant="top" src={Icon3} />
+        <Card.Img className='accommodationsIcon mx-auto' src={Icon3} roundedCircle />
         <Card.Body>
           <Card.Title className='accommodationsTitle'>AirBnB Sault Ste Marie</Card.Title>
           <Card.Text>
@@ -94,7 +94,7 @@ const AccommodationsPages = () => {
       <Accordion.Item eventKey="0">
         <Accordion.Header>More Information</Accordion.Header>
         <Accordion.Body>
-            Here is the link for AirBnB, please feel free to contact us should you have any questions about the area, or location of places you  might want to stay.
+        <a className="accommodationsTag" href="https://www.airbnb.ca/a/stays/Sault-Ste-Marie--Ontario--Canada?sem_brand_destination_erf=true&c=.pi0.pk355652324_64070011577&localized_ghost=true&gclid=Cj0KCQiAg_KbBhDLARIsANx7wAz5IU_QCWml_dQ4m2iAbW_ch5UPfoWvPvjc6JymqPTDfR01hoXdbv8aAmXMEALw_wcB" target='_blank' rel='noreferrer'>Here</a> is the link for AirBnB, please feel free to contact us should you have any questions about the area, or location of places you  might want to stay.
         </Accordion.Body>
       </Accordion.Item>
     </Accordion>

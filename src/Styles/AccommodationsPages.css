@@ -23,5 +23,8 @@
 .accommodationsIcon {
     height: 200px;
     width: 200px;
-    margin: auto;
+    padding: 10px;
+    margin-top: 10px;
+    border: 3px solid #fff;
+    border-radius: 50%;
 }
