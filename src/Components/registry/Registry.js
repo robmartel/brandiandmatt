@@ -26,9 +26,9 @@ const Registry = () => {
   return (
    
    <Container>
-   <Icon to='/'>
+   {/* <Icon to='/'>
             <GiRose style={{color: isHovering ? 'red' : 'white'}} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} /> 
-            </Icon>
+            </Icon> */}
             <RegistryPic src={require('../../images/brandimatt.jpg')} alt='two people' />
             <RegistryH1>Registry</RegistryH1>
             <ImgWrapper>

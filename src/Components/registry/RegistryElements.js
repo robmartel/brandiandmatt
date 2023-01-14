@@ -3,13 +3,12 @@ import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
 min-height: 692px;
+width: auto;
 position: relative;
 bottom: 0;
-left: 0;
-right: 0;
-top: 0;
+margin: 0 auto;
+padding-top: 50px;
 z-index: 0;
-overflow: scroll;
 background: linear-gradient(108deg, rgba(3, 165, 252, 1) 0%, rgba(230, 230, 250) 100%);
 `
 
@@ -34,12 +33,13 @@ display: flex;
 position: relative;
 float: right;
 align-items: center;
-top: 32px;
+top: 16px;
 right: 75px;
 
 @media screen and (max-width: 1000px) {
     margin-left: 16px;
     margin-bottom: 60px;
+    top: 0;
     margin-top: 0;
     height: 75px;
     width: 75px;
@@ -83,6 +83,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 margin-right: 24px;
+margin-bottom: 0px;
 `
 
 export const RegistryBtnLink = styled(Link)`
