@@ -46,7 +46,7 @@ const Footer = () => {
           <div className="openDaysAndTime">
             Wedding Date - July 22, 2023
             <br />
-            Other date - 
+            Stag and Doe - June 10, 2023 
             <br />
             Tag us - #brandiandmatt2023
           </div>
