@@ -1,22 +1,11 @@
 import React, { useState } from 'react';
-import { Container, Icon, RegistryPic, RegistryH1, ImgWrapper, Img, RegistryP, RegistryBtn, RegistryBtnLink } from './RegistryElements';
-import { GiRose } from 'react-icons/gi';
+import { Container, RegistryPic, RegistryH1, ImgWrapper, Img, RegistryP, RegistryBtn, RegistryBtnLink } from './RegistryElements';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import { Formik } from 'formik';
 import RsvpForm from '../rsvp/RsvpForm';
 
 const Registry = () => {
-
-  const [isHovering, setIsHovering] = useState(false);
-
-  const handleMouseEnter = () => {
-    setIsHovering(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovering(false);
-  };
 
   const [show, setShow] = useState(false);
 
@@ -26,9 +15,6 @@ const Registry = () => {
   return (
    
    <Container>
-   {/* <Icon to='/'>
-            <GiRose style={{color: isHovering ? 'red' : 'white'}} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} /> 
-            </Icon> */}
             <RegistryPic src={require('../../images/brandimatt.jpg')} alt='two people' />
             <RegistryH1>Registry</RegistryH1>
             <ImgWrapper>

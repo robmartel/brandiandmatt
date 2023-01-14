@@ -15,7 +15,7 @@ const AccommodationsPages = () => {
     <div className='accommodationsCardContainer'>
     <CardGroup>
       <Card>
-        <Card.Img className='accommodationsIcon mx-auto'  src={Icon1} roundedCircle />
+        <Card.Img className='accommodationsIcon mx-auto'  src={Icon1} style={{borderRadius: "50%", height: "200px", width: "200px"}} />
         <Card.Body>
           <Card.Title className='accommodationsTitle'>Quattro Hotel</Card.Title>
           <Card.Text>
@@ -37,9 +37,17 @@ const AccommodationsPages = () => {
         </Accordion.Body>
       </Accordion.Item>
       <Accordion.Item eventKey="2">
+        <Accordion.Header>Price</Accordion.Header>
+        <Accordion.Body>
+       <strong>Option 1</strong> - 1 King & sofa with Queen pullout = <strong>$129.23</strong> / night or <strong>$258.46</strong> for 2 nights. <br/>
+       <strong>Option 2</strong> - 2 Queen & sofa with Queen pullout = <strong>$162.63</strong> / night or <strong>$325.26</strong> for 2 nights.
+        </Accordion.Body>
+      </Accordion.Item>
+      <Accordion.Item eventKey="3">
         <Accordion.Header>More Information</Accordion.Header>
         <Accordion.Body>
-       Here is more information about Quattro.
+       All rooms have a mini fridge, microwave and Keurig Coffee Machine. <br/>
+       Complimentary breakfast at in-house restaurant: eggs, home fries, yogurts, cereals, fresh fruit, pastries, coffee, tea.
         </Accordion.Body>
       </Accordion.Item>
     </Accordion>
@@ -49,7 +57,7 @@ const AccommodationsPages = () => {
         </Card.Footer>
       </Card>
       <Card>
-        <Card.Img className='accommodationsIcon mx-auto' src={Icon2} roundedCircle />
+        <Card.Img className='accommodationsIcon mx-auto' src={Icon2} style={{borderRadius: "50%", height: "200px", width: "200px"}} />
         <Card.Body>
           <Card.Title className='accommodationsTitle'>Microtel Inn & Suites by Wyndham</Card.Title>
           <Card.Text>
@@ -84,7 +92,7 @@ const AccommodationsPages = () => {
         </Card.Footer> */}
       </Card>
       <Card>
-        <Card.Img className='accommodationsIcon mx-auto' src={Icon3} roundedCircle />
+        <Card.Img className='accommodationsIcon mx-auto' src={Icon3} style={{borderRadius: "50%", height: "200px", width: "200px"}} />
         <Card.Body>
           <Card.Title className='accommodationsTitle'>AirBnB Sault Ste Marie</Card.Title>
           <Card.Text>
