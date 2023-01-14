@@ -1,0 +1,42 @@
+
+.stagWrapper {
+    padding: 48px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.stagContainer {
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+    max-width: 40rem;
+}
+
+.stagPageTitle {
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.stagTitle {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.stagLink {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.stagLink:hover {
+    color: rgb(207, 3, 252);
+}
+
+.stagItems {
+    font-weight: bold;
+    
+}
+

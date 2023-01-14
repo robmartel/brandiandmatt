@@ -54,3 +54,22 @@ export const homeObjThree = {
     darkText: true,
 
 };
+
+export const homeObjFour = {
+    id: 'stagDoe',
+    lightBg: false,
+    lightText: true,
+    lightTextDesc: true,
+    topLine: '',
+    headline: 'Stag and Doe',
+    description: 'June 10, 2023 at the Moose Lodge',
+    buttonLabel: 'RSVP to Wedding',
+    buttonLabel3: 'More Info',
+    imgStart: true,
+    img: require('../../images/beast.png'),
+    alt: 'logo',
+    dark: true,
+    primary: true,
+    darkText: false,
+
+};

@@ -93,6 +93,11 @@ const toggleHome = () => {
             smooth={true} duration={500} spy={true} exact='true' offset={-80}
             >Registry</NavLinks>
             </NavItem>
+            <NavItem>
+            <NavLinks to="stagDoe" 
+            smooth={true} duration={500} spy={true} exact='true' offset={-80}
+            >Stag and Doe</NavLinks>
+            </NavItem>
         </NavMenu>
         <NavBtn>
             <NavBtnLink onClick={handleShow}>RSVP</NavBtnLink>
