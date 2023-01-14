@@ -52,9 +52,6 @@ const AccommodationsPages = () => {
       </Accordion.Item>
     </Accordion>
         </Card.Body>
-        <Card.Footer>
-          {/* <small className="text-muted">Last updated 3 mins ago</small> */}
-        </Card.Footer>
       </Card>
       <Card>
         <Card.Img className='accommodationsIcon mx-auto' src={Icon2} style={{borderRadius: "50%", height: "200px", width: "200px"}} />
@@ -87,9 +84,6 @@ const AccommodationsPages = () => {
       </Accordion.Item>
     </Accordion>
         </Card.Body>
-        {/* <Card.Footer>
-          <small className="text-muted">Last updated 3 mins ago</small>
-        </Card.Footer> */}
       </Card>
       <Card>
         <Card.Img className='accommodationsIcon mx-auto' src={Icon3} style={{borderRadius: "50%", height: "200px", width: "200px"}} />
@@ -107,9 +101,6 @@ const AccommodationsPages = () => {
       </Accordion.Item>
     </Accordion>
         </Card.Body>
-        {/* <Card.Footer>
-          <small className="text-muted">Last updated 3 mins ago</small>
-        </Card.Footer> */}
       </Card>
     </CardGroup>
     </div>
