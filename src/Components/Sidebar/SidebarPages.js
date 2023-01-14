@@ -13,6 +13,7 @@ const SidebarPages = ({isOpen, toggle}) => {
             <SidebarLink to="/reception" onClick={toggle} >Reception</SidebarLink>
             <SidebarLink to="/accommodations" onClick={toggle} >Accommodations</SidebarLink>
             <SidebarLink to="/registry" onClick={toggle} >Registry</SidebarLink>
+            <SidebarLink to="/stagDoe" onClick={toggle} >Stag and Doe</SidebarLink>
             <SideBtnWrap>
             <SidebarRoute to="/rsvp">RSVP</SidebarRoute>
         </SideBtnWrap>

@@ -99,7 +99,7 @@ const InfoSection = ({
       </Modal>
 
                   <Button
-                    to={id==='registry' ? '/registry' : id=== 'ceremony' ? '/ceremony' : id==='reception' ? '/reception' : '/rsvp'}
+                    to={id==='registry' ? '/registry' : id=== 'ceremony' ? '/ceremony' : id==='reception' ? '/reception' : id=== 'stagDoe' ? '/stagDoe' : '/'}
                     smooth={true}
                     duration={500}
                     spy={true}

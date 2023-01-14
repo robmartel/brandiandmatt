@@ -63,6 +63,11 @@ const handleShow = () => setShow(true);
              exact='true'
             >Registry</NavLinks>
             </NavItem>
+            <NavItem>
+            <NavLinks to="/stagDoe" 
+             exact='true'
+            >Stag and Doe</NavLinks>
+            </NavItem>
         </NavMenu>
         <NavBtn>
             <NavBtnLink onClick={handleShow}>RSVP</NavBtnLink>

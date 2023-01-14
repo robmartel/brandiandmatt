@@ -6,6 +6,7 @@ import CeremonyPage from './Pages/CeremonyPage';
 import ReceptionPage from './Pages/ReceptionPage';
 import RSVPPage from './Pages/RSVPPage';
 import AccommodationsPage from './Pages/AccommodationsPage';
+import StagDoePage from './Pages/StagDoePage';
 
 function App() {
   return (
@@ -35,6 +36,10 @@ function App() {
          <Route
         path='/accommodations'
         element={<AccommodationsPage />}
+        />
+        <Route
+        path='/stagDoe'
+        element={<StagDoePage />}
         />
       </Routes>
       </div>
