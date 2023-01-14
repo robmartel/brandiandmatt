@@ -33,10 +33,12 @@
 
 .stagLink:hover {
     color: rgb(207, 3, 252);
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .stagItems {
     font-weight: bold;
-    
+
 }
 
