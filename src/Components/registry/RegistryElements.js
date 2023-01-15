@@ -8,6 +8,7 @@ position: relative;
 bottom: 0;
 margin: 0 auto;
 padding-top: 50px;
+padding-bottom: 2.5rem;
 z-index: 0;
 background: linear-gradient(108deg, rgba(3, 165, 252, 1) 0%, rgba(230, 230, 250) 100%);
 `
@@ -37,7 +38,7 @@ top: 16px;
 right: 75px;
 
 @media screen and (max-width: 1000px) {
-    margin-left: 16px;
+    margin-left: 80px;
     margin-bottom: 60px;
     top: 0;
     margin-top: 0;
@@ -49,8 +50,10 @@ right: 75px;
 export const RegistryH1 = styled.h1`
 text-align: center;
 margin-left: 80px;
-font-weight: 700;
+font-weight: bold;
+font-size: 50px;
 color: white;
+padding: 24px;
 `
 
 export const ImgWrapper = styled.div`
