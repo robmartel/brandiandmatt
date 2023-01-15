@@ -13,9 +13,7 @@ export const infoObjOne = {
     img1: require('../../images/ring.jpg'),
     alt: 'ring',
     img2: require('../../images/brandimatt.jpg'),
-    // alt: 'two people smiling',
     img3: require('../../images/brandimatt2.jpg'),
-    // alt: 'two people',
 
 };
 
@@ -31,12 +29,10 @@ export const infoObjTwo = {
     linkLabel2: 'Grand Gardens',
     link1: '/',
     link2: "https://thegrandgardens.ca/",
-    img1: require('../../images/ring.jpg'),
+    img1: require('../../images/brandimatt2.jpg'),
     alt: 'ring',
     img2: require('../../images/brandimatt.jpg'),
-    // alt: 'two people',
-    img3: require('../../images/brandimatt2.jpg'),
-    // alt: 'two people',
-
+    img3: require('../../images/ring.jpg'),
+    
 };
 

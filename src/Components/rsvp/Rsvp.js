@@ -3,7 +3,7 @@ import { RiMickeyLine } from 'react-icons/ri';
 import { Container, FormContainer, FormRadio, FormRadioLabel, FormWrap, FormSelect, FormTextArea, Icon, FormContent, Form, FormH1, FormP, FormLabel, FormInput, FormButton, Text } from './RsvpElements'
 import emailjs from '@emailjs/browser';
 
-const Rsvp = ({show, handClose}) => {
+const Rsvp = () => {
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -11,9 +11,7 @@ const Rsvp = ({show, handClose}) => {
 
     const userName = e.target[0].value;
     const email = e.target[1].value;
-    // const attending = e.target[2].value;
     const attending = state;
-    // const plusOne = e.target[3].value;
     const plusOne = plusone;
     const guests = e.target[4].value;
     const guestNumber = e.target[5].value;
@@ -32,9 +30,7 @@ const Rsvp = ({show, handClose}) => {
         song: song,
         message: message, 
     };
-    console.log(" templatedparmas",templateParams);
      emailjs.send(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, templateParams, process.env.REACT_APP_PUBLIC_KEY)
-    // emailjs.send('service_gd7gbot1', 'template_9pn5aba', templateParams, 'user_T460qcGFHu3WS5K7aV7Yy')
     
       .then((result) => {
           console.log(result.text);

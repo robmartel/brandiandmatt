@@ -68,7 +68,6 @@ const HeroSection = () => {
 
 <Formik
   className="bookingCredentials"
- 
   component={RsvpForm}
 />
 <small className='' style={{display: "flex", justifyContent: "center", color: "white"}}>Thank you for letting us know!</small>

@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
 import ScrollToTop from '../Components/ScrollToTop';
-import Sidebar from '../Components/Sidebar/Sidebar';
 import NavBarPages from '../Components/NavbarPages/NavbarPages';
 import AccommodationsPages from '../Components/Accommodations/AccommodationsPages';
 import Footer from '../Components/Footer/Footer';
+import SidebarPages from '../Components/Sidebar/SidebarPages';
 
 const AccommodationsPage = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +14,7 @@ const AccommodationsPage = () => {
     return (
         <>
         <ScrollToTop />
-        <Sidebar isOpen={isOpen} toggle={toggle} />
+        <SidebarPages isOpen={isOpen} toggle={toggle} />
         <NavBarPages toggle={toggle} />
         <AccommodationsPages />
         <Footer />
