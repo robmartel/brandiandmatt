@@ -8,8 +8,8 @@ const StagDoe = () => {
     <div className='stagWrapper'>
         <h1 className='stagPageTitle'>Stag and Doe</h1>
     <Card className='stagContainer' >
-      <Card.Img variant="top" src= {require("../../images/beast.png")} />
-      <Card.Body>
+      <Card.Img className='stagImg' variant="top" src= {require("../../images/beast.png")} />
+      <Card.Body className='stagBody'>
         <Card.Title className="stagTitle">The Moose Lodge</Card.Title>
         <Card.Text>
           Come and support Brandi and Matt to celebrate their marriage. There will be a dj, full dinner, tons of auction items, games and of course booze!
@@ -27,7 +27,7 @@ const StagDoe = () => {
 
 
       </ListGroup>
-      <Card.Body>
+      <Card.Body className='stagLinksBody'>
         <Card.Link className='stagLink' href="/">Home</Card.Link>
         <Card.Link className='stagLink' href="#">Another Link</Card.Link>
       </Card.Body>

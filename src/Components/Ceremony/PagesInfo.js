@@ -8,9 +8,10 @@ import "../../Styles/Carousel.css";
 
 const PagesInfo = ({ headline, headlineDescription, location, address, startTime, startTimeSharp, linkLabel1, linkLabel2, link1, link2, img1, img2, img3 }) => {
   return (
-    <div className='ceremonyContainer'>
+    <div className='carouselWrapper'>
+      <h1 className='carouselPageTitle'>{headline}</h1>
+    <div className='carouselContainer1'>
     <Card style={{ width: '25rem', maxHeight: 'vh-100', margin: 'auto', marginBottom: '32px', marginTop: '32px' }}>
-    {/* <Card.Img variant="top" src={require("../../images/thomson.JPG")} /> */}
     <div id='carouselDiv'>
         <div className='carouselContainer'>
     <Carousel className='carousel' fade>
@@ -50,14 +51,14 @@ const PagesInfo = ({ headline, headlineDescription, location, address, startTime
       <Carousel.Caption id="carouselCaptionWhite">
         <h3 className="carouselCaptionHeader">{headline}</h3>
         <p>
-          Drinking game of the day will be every time Brandi yells
+          Any pictures that you take we kindly ask that you post and tag #brandiandmatt2023
         </p>
       </Carousel.Caption>
     </Carousel.Item>
   </Carousel>
   </div>
   </div>
-    <Card.Body>
+    <Card.Body className='carouselBody'>
       <Card.Title>{headline}</Card.Title>
       <Card.Text>
         {headlineDescription}
@@ -68,11 +69,12 @@ const PagesInfo = ({ headline, headlineDescription, location, address, startTime
       <ListGroup.Item>{address}</ListGroup.Item>
       <ListGroup.Item>{startTime} </ListGroup.Item>
     </ListGroup>
-    <Card.Body style={{display: 'flex', justifyContent: 'center'}}>
+    <Card.Body className='carouselLinks' style={{display: 'flex', justifyContent: 'center'}}>
       <Card.Link className='cardLinks' href={link1}>{linkLabel1}</Card.Link>
       <Card.Link className='cardLinks' href={link2} target="_blank">{linkLabel2}</Card.Link>
     </Card.Body>
   </Card>
+  </div>
   </div>
   )
 }

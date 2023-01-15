@@ -1,4 +1,15 @@
+.carouselWrapper {
+  padding: 48px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+.carouselPageTitle {
+  font-weight: bold;
+  font-size: 50px;
+}
 
 .carouselContainer {
     width: auto;
@@ -9,6 +20,11 @@
   
   .carousel {
     z-index: 0;
+    border: 2px solid rgb(3, 165, 252);
+  }
+
+  .carouselBody, .list-group-flush, .carouselLinks {
+    border: 2px solid rgb(3, 165, 252);
   }
   
   #carouselDiv {
