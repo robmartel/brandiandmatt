@@ -34,7 +34,7 @@ const StagDoe = () => {
 
       </ListGroup>
       <Card.Body className='stagLinksBody'>
-        <Card.Link className='stagLink' href="/" onClick={toggleHome}>Home</Card.Link>
+        <Card.Link className='stagLink' href="https://robmartel.github.io/brandiandmatt/#/" onClick={toggleHome}>Home</Card.Link>
         <Card.Link className='stagLink' href="#">Another Link</Card.Link>
       </Card.Body>
     </Card>
