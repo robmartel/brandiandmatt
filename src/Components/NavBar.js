@@ -97,14 +97,14 @@ const toggleHome = () => {
           <Modal.Title >RSVP</Modal.Title>
         </Modal.Header>
         <Modal.Body className='modalBody'>
-        <small className='' style={{display: "flex", justifyContent: "center", color: "white"}}>Please submit before January 3, 3449</small>
+        <small className='' style={{display: "flex", justifyContent: "center", color: "white"}}>Please submit before June 1, 2023</small>
         <div>
 
 <Formik
   className="bookingCredentials"
   component={RsvpForm}
 />
-<small className='' style={{display: "flex", justifyContent: "center", color: "white"}}>Thank you, we look forward to getting your gift!</small>
+<small className='' style={{display: "flex", justifyContent: "center", color: "white"}}>Thank you!</small>
 
 </div>
         </Modal.Body>

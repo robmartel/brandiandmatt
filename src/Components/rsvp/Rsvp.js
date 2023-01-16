@@ -71,7 +71,7 @@ const Rsvp = () => {
             <FormContent>
                 <Form ref={form} onSubmit={sendEmail}>
                     <FormH1>RSVP</FormH1>
-                    <FormP>Please Respond by January 1st, 2099</FormP>
+                    <FormP>Please Respond by June 1st, 2023</FormP>
                     <FormLabel htmlFor='name' >Name:</FormLabel>
                     <FormInput id='name' type='name' name='name' placeholder='First and Last Name' required />
                     <FormLabel htmlFor='email' >Email:</FormLabel>
