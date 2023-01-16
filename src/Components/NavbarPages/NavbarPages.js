@@ -39,6 +39,17 @@ let activeStyle = {
   borderBottom: "5px solid rgb(207, 3, 252)",
 };
 
+let linkStyle = {
+  color: "#fff",
+  display: "flex",
+  alignItems: "center",
+  textDecoration: "none",
+  padding: "0 1.5rem",
+  height: "100%",
+  marginTop: "0.5rem",
+  cursor: "pointer",
+}
+
   return (
     <>
     {/* the next line keeps the icons whatever color is in there */}
@@ -54,35 +65,35 @@ let activeStyle = {
         <ul className='navMenu'>
             <li className='navItem'>
             <NavLink className='nav-link' 
-            style={({isActive}) => isActive ? activeStyle : undefined} 
+            style={({isActive}) => isActive ? activeStyle : linkStyle} 
             to="/ceremony" 
             exact='true' 
             >Ceremony</NavLink>
             </li>
             <li className='navItem'>
             <NavLink className='nav-link' 
-            style={({isActive}) => isActive ? activeStyle : undefined} 
+            style={({isActive}) => isActive ? activeStyle : linkStyle} 
             to="/reception" 
              exact='true' 
             >Reception</NavLink>
             </li>
             <li className='navItem'>
             <NavLink className='nav-link' 
-            style={({isActive}) => isActive ? activeStyle : undefined} 
+            style={({isActive}) => isActive ? activeStyle : linkStyle} 
             to="/accommodations" 
              exact='true'
             >Accommodations</NavLink>
             </li>
             <li className='navItem'>
             <NavLink className='nav-link' 
-            style={({isActive}) => isActive ? activeStyle : undefined} 
+            style={({isActive}) => isActive ? activeStyle : linkStyle} 
             to="/registry" 
              exact='true'
             >Registry</NavLink>
             </li>
             <li className='navItem'>
             <NavLink className='nav-link'
-            style={({isActive}) => isActive ? activeStyle : undefined} 
+            style={({isActive}) => isActive ? activeStyle : linkStyle} 
             to="/stagDoe" 
              exact='true'
             >Stag and Doe</NavLink>
