@@ -7,8 +7,8 @@ import Button from 'react-bootstrap/Button';
 import { Formik } from 'formik'; 
 import RsvpForm from '../../Components/rsvp/RsvpForm';
 import { animateScroll as scroll } from 'react-scroll';
-import { Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks, NavBtn, NavBtnLink } from './NavbarPagesElements';
-// import '../../Styles/NavBarPages.css';
+import { NavLink } from 'react-router-dom';
+import '../../Styles/NavBarPages.css';
 
 const NavBarPages = ({toggle}) => {
 
@@ -31,54 +31,66 @@ const [show, setShow] = useState(false);
 const handleClose = () => setShow(false);
 const handleShow = () => setShow(true);
 
+let activeStyle = {
+  color: "rgb(207, 3, 252)",
+  fontWeight: "bold",
+  fontSize: "1.5rem",
+  transitionDuration: "450ms",
+  borderBottom: "5px solid rgb(207, 3, 252)",
+};
+
   return (
     <>
     {/* the next line keeps the icons whatever color is in there */}
     <IconContext.Provider value={{ color: '#fff'}}>  
-      <Nav>
-        <NavbarContainer>
-            <NavLogo to="/" onClick={toggleHome}>
+      <nav className='nav'>
+        <div className='navbarContainer'>
+            <NavLink className='navLogo' to="/" onClick={toggleHome}>
             <RiMickeyLine style={{color: isHovering ? 'red' : 'white'}} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} />  
-            </NavLogo>
-            <MobileIcon onClick={toggle}>
+            </NavLink>
+            <div className='mobileIcon' onClick={toggle}>
                 <FaBars />
-            </MobileIcon>
-        <NavMenu>
-            <NavItem>
-            <NavLinks  
+            </div>
+        <ul className='navMenu'>
+            <li className='navItem'>
+            <NavLink className='nav-link' 
+            style={({isActive}) => isActive ? activeStyle : undefined} 
             to="/ceremony" 
-             exact='true' 
-            // activeClassName='active-links'
-            >Ceremony</NavLinks>
-            </NavItem>
-            <NavItem >
-            <NavLinks 
+            exact='true' 
+            >Ceremony</NavLink>
+            </li>
+            <li className='navItem'>
+            <NavLink className='nav-link' 
+            style={({isActive}) => isActive ? activeStyle : undefined} 
             to="/reception" 
              exact='true' 
-            >Reception</NavLinks>
-            </NavItem>
-            <NavItem>
-            <NavLinks 
+            >Reception</NavLink>
+            </li>
+            <li className='navItem'>
+            <NavLink className='nav-link' 
+            style={({isActive}) => isActive ? activeStyle : undefined} 
             to="/accommodations" 
              exact='true'
-            >Accommodations</NavLinks>
-            </NavItem>
-            <NavItem>
-            <NavLinks  
+            >Accommodations</NavLink>
+            </li>
+            <li className='navItem'>
+            <NavLink className='nav-link' 
+            style={({isActive}) => isActive ? activeStyle : undefined} 
             to="/registry" 
              exact='true'
-            >Registry</NavLinks>
-            </NavItem>
-            <NavItem>
-            <NavLinks 
+            >Registry</NavLink>
+            </li>
+            <li className='navItem'>
+            <NavLink className='nav-link'
+            style={({isActive}) => isActive ? activeStyle : undefined} 
             to="/stagDoe" 
              exact='true'
-            >Stag and Doe</NavLinks>
-            </NavItem>
-        </NavMenu>
-        <NavBtn>
-            <NavBtnLink onClick={handleShow}>RSVP</NavBtnLink>
-        </NavBtn>
+            >Stag and Doe</NavLink>
+            </li>
+        </ul>
+        <nav className='navBtn'>
+            <NavLink className='navBtnLink' onClick={handleShow}>RSVP</NavLink>
+        </nav>
 
         <Modal
         show={show}
@@ -108,8 +120,8 @@ const handleShow = () => setShow(true);
         </Modal.Footer>
       </Modal>
 
-        </NavbarContainer>
-      </Nav>
+        </div>
+      </nav>
       </IconContext.Provider>
     </>
   )
