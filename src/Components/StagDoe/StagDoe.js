@@ -2,6 +2,7 @@ import React from 'react'
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import { animateScroll as scroll } from 'react-scroll';
+import { NavLink } from 'react-router-dom';
 
 const StagDoe = () => {
 
@@ -34,7 +35,7 @@ const StagDoe = () => {
 
       </ListGroup>
       <Card.Body className='stagLinksBody'>
-        <Card.Link className='stagLink' href="https://robmartel.github.io/brandiandmatt/#/" onClick={toggleHome}>Home</Card.Link>
+        <NavLink className='stagLink' href="/" onClick={toggleHome}>Home</NavLink>
         <Card.Link className='stagLink' href="#">Another Link</Card.Link>
       </Card.Body>
     </Card>

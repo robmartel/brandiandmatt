@@ -2,6 +2,7 @@ import React from 'react'
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Carousel from 'react-bootstrap/Carousel';
+import { NavLink } from 'react-router-dom';
 import "../../Styles/Carousel.css";
 
 
@@ -70,8 +71,8 @@ const PagesInfo = ({ headline, headlineDescription, location, address, startTime
       <ListGroup.Item>{startTime} </ListGroup.Item>
     </ListGroup>
     <Card.Body className='carouselLinks' style={{display: 'flex', justifyContent: 'center'}}>
-      <Card.Link className='cardLinks' href={link1}>{linkLabel1}</Card.Link>
-      <Card.Link className='cardLinks' href={link2} target="_blank">{linkLabel2}</Card.Link>
+      <NavLink className='cardLinks' href={link1}>{linkLabel1}</NavLink>
+      <NavLink className='cardLinks' href={link2} target="_blank">{linkLabel2}</NavLink>
     </Card.Body>
   </Card>
   </div>
