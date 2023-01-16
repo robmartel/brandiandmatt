@@ -8,8 +8,7 @@ import { Formik } from 'formik';
 import RsvpForm from '../../Components/rsvp/RsvpForm';
 import { animateScroll as scroll } from 'react-scroll';
 import { Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks, NavBtn, NavBtnLink } from './NavbarPagesElements';
-import { NavLink } from 'react-router-dom';
-import '../../Styles/NavBarPages.css';
+// import '../../Styles/NavBarPages.css';
 
 const NavBarPages = ({toggle}) => {
 
@@ -49,7 +48,7 @@ const handleShow = () => setShow(true);
             <NavLinks  
             to="/ceremony" 
              exact='true' 
-             activeClassName='text-red-600'
+            // activeClassName='active-links'
             >Ceremony</NavLinks>
             </NavItem>
             <NavItem >
