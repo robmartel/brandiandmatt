@@ -1,8 +1,14 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
+import { animateScroll as scroll } from 'react-scroll';
 
 const StagDoe = () => {
+
+  const toggleHome = ({toggle}) => {
+    scroll.scrollToTop();
+  }
+
   return (
     <>
     <div className='stagWrapper'>
@@ -28,7 +34,7 @@ const StagDoe = () => {
 
       </ListGroup>
       <Card.Body className='stagLinksBody'>
-        <Card.Link className='stagLink' href="/">Home</Card.Link>
+        <Card.Link className='stagLink' href="/" onClick={toggleHome}>Home</Card.Link>
         <Card.Link className='stagLink' href="#">Another Link</Card.Link>
       </Card.Body>
     </Card>

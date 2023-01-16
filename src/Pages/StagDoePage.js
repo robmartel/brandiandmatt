@@ -18,7 +18,7 @@ const StagDoePage = () => {
         <ScrollToTop />
         <SidebarPages isOpen={isOpen} toggle={toggle} />
         <NavBarPages toggle={toggle} />
-        <StagDoe />
+        <StagDoe toggle={toggle}/>
         <Footer />
         </>
     );
