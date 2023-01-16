@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/brandiandmatt/static/css/main.22f773fa.css",
-    "main.js": "/brandiandmatt/static/js/main.f1f43a64.js",
+    "main.css": "/brandiandmatt/static/css/main.d006f093.css",
+    "main.js": "/brandiandmatt/static/js/main.76393b67.js",
     "static/js/787.bd80536b.chunk.js": "/brandiandmatt/static/js/787.bd80536b.chunk.js",
     "static/media/video.mp4": "/brandiandmatt/static/media/video.9d06adc9ff6851a34c0d.mp4",
     "static/media/brandimatt2.jpg": "/brandiandmatt/static/media/brandimatt2.2d60728bb8b618adb802.jpg",
@@ -9,12 +9,12 @@
     "static/media/thomson.JPG": "/brandiandmatt/static/media/thomson.c02ea2ecb5eba774432a.JPG",
     "static/media/brandimatt.jpg": "/brandiandmatt/static/media/brandimatt.1ecab1e252a69d30470a.jpg",
     "index.html": "/brandiandmatt/index.html",
-    "main.22f773fa.css.map": "/brandiandmatt/static/css/main.22f773fa.css.map",
-    "main.f1f43a64.js.map": "/brandiandmatt/static/js/main.f1f43a64.js.map",
+    "main.d006f093.css.map": "/brandiandmatt/static/css/main.d006f093.css.map",
+    "main.76393b67.js.map": "/brandiandmatt/static/js/main.76393b67.js.map",
     "787.bd80536b.chunk.js.map": "/brandiandmatt/static/js/787.bd80536b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.22f773fa.css",
-    "static/js/main.f1f43a64.js"
+    "static/css/main.d006f093.css",
+    "static/js/main.76393b67.js"
   ]
 }
