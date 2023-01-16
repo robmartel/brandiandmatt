@@ -27,7 +27,7 @@ export const infoObjTwo = {
     startTime: 'Start Time: 6:00 p.m.',
     linkLabel1: 'Home Page',
     linkLabel2: 'Grand Gardens',
-    link1: 'https://robmartel.github.io/brandiandmatt/#/',
+    link1: "/brandiandmatt/",
     link2: "https://thegrandgardens.ca/",
     img1: require('../../images/brandimatt2.jpg'),
     alt: 'ring',

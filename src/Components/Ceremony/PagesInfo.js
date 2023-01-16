@@ -2,12 +2,17 @@ import React from 'react'
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Carousel from 'react-bootstrap/Carousel';
-import { NavLink } from 'react-router-dom';
+import { animateScroll as scroll } from 'react-scroll';
 import "../../Styles/Carousel.css";
 
 
 
 const PagesInfo = ({ headline, headlineDescription, location, address, startTime, startTimeSharp, linkLabel1, linkLabel2, link1, link2, img1, img2, img3 }) => {
+
+  const toggleHome = () => {
+    scroll.scrollToTop();
+  }
+
   return (
     <div className='carouselWrapper'>
       <h1 className='carouselPageTitle'>{headline}</h1>
@@ -71,7 +76,7 @@ const PagesInfo = ({ headline, headlineDescription, location, address, startTime
       <ListGroup.Item>{startTime} </ListGroup.Item>
     </ListGroup>
     <Card.Body className='carouselLinks' style={{display: 'flex', justifyContent: 'center'}}>
-      <Card.Link className='cardLinks' href={link1}>{linkLabel1}</Card.Link>
+      <Card.Link className='cardLinks' href={link1} onClick={toggleHome}>{linkLabel1}</Card.Link>
       <Card.Link className='cardLinks' href={link2} target="_blank">{linkLabel2}</Card.Link>
     </Card.Body>
   </Card>
