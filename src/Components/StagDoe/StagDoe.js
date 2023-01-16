@@ -5,7 +5,7 @@ import { animateScroll as scroll } from 'react-scroll';
 
 const StagDoe = () => {
 
-  const toggleHome = ({toggle}) => {
+  const toggleHome = () => {
     scroll.scrollToTop();
   }
 

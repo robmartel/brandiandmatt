@@ -18,7 +18,7 @@ const Footer = () => {
       <section>
       
         <div className="iconsection">
-        <a className="IconHome" href='/' onClick={toggleHome}>
+        <a className="IconHome" href='/brandiandmatt/' onClick={toggleHome}>
                  <RiMickeyLine />
         </a>
           <a href="https://www.instagram.com/brandiandmatt2023/" target="_blank" rel="noreferrer" aria-label="Instagram" >
