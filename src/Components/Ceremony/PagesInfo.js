@@ -72,7 +72,7 @@ const PagesInfo = ({ headline, headlineDescription, location, address, startTime
     </ListGroup>
     <Card.Body className='carouselLinks' style={{display: 'flex', justifyContent: 'center'}}>
       <NavLink className='cardLinks' href='/'>{linkLabel1}</NavLink>
-      <NavLink className='cardLinks' href={link2} target="_blank">{linkLabel2}</NavLink>
+      <Card.Link className='cardLinks' href={link2} target="_blank">{linkLabel2}</Card.Link>
     </Card.Body>
   </Card>
   </div>
