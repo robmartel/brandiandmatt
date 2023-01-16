@@ -8,7 +8,7 @@ export const infoObjOne = {
     startTime: 'Start Time: 3:00 p.m.',
     linkLabel1: 'Home Page',
     linkLabel2: 'Thomson Farms',
-    link1: '/brandiandmatt/#/',
+    link1: "/brandiandmatt/",
     link2: "https://www.thomsonfarms.ca/",
     img1: require('../../images/ring.jpg'),
     alt: 'ring',

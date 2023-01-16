@@ -4,9 +4,9 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import { animateScroll as scroll } from 'react-scroll';
 import { NavLink } from 'react-router-dom';
 
-const StagDoe = ({toggle}) => {
+const StagDoe = () => {
 
-  const toggleHome = () => {
+  const toggleHome = ({toggle}) => {
     scroll.scrollToTop();
   }
 
