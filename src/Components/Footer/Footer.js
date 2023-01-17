@@ -37,7 +37,7 @@ const Footer = () => {
             </a>
             <br />
             <AiOutlinePhone style={{ marginRight: "5px" }} />
-            <a href="tel:+7052976459">(705) 297-XXXX</a>
+            <a href="tel:+7052976459">(705) 297-6459</a>
             <br />
             <HiOutlineLocationMarker style={{ marginRight: "5px" }} />
             Sault Ste. Marie, Ontario

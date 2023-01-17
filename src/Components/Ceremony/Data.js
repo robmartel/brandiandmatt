@@ -1,7 +1,7 @@
 export const infoObjOne = {
     id: 'ceremony',
     headline: 'Ceremony',
-    headlineDescription: 'Brandi and Matt have chosen Thomson Farms to say their \'I do\'s\'. If you have any questions please feel free to contact us.',
+    headlineDescription: 'Brandi and Mathieu have chosen Thomson Farms to say their \'I do\'s\'. If you have any questions please feel free to contact us.',
     location: 'Location: Thomson Farms Cider and Winery',
     address: 'Address: 4057 Third Line West, Sault Ste. Marie, Ontario, P6A 5K8',
     startTimeSharp: 'Will start at 3:00 p.m. sharp',
@@ -20,7 +20,7 @@ export const infoObjOne = {
 export const infoObjTwo = {
     id: 'reception',
     headline: 'Reception',
-    headlineDescription: 'Brandi and Matt have chosen the Grand Gardens for their reception! If you have any questions please feel free to contact us.',
+    headlineDescription: 'Brandi and Mathieu have chosen the Grand Gardens for their reception! If you have any questions please feel free to contact us.',
     location: 'Location: Grand Gardens North',
     address: 'Address: 1324 Great Northern Road, Sault Ste. Marie, Ontario, P6A 5K7',
     startTimeSharp: 'Will start at 6:00 p.m. sharp',

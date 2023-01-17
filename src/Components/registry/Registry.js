@@ -22,7 +22,7 @@ const Registry = () => {
             <Img src={require('../../images/amazon.png')} alt='image' />
             </a>
             <RegistryP>Click <a className="accommodationsTag" href="https://www.amazon.ca/wedding/brandi-martel-mathieu-jacques-sault-ste-marie-july-2023/registry/3KP05CJKWV1KU" target="-blank" rel="noreferrer">here</a>, or
- on the image for Brandi and Matt's Registry Page</RegistryP>
+ on the image for Brandi and Mathieu's Registry Page</RegistryP>
             </ImgWrapper>
             <RegistryBtn>
               <RegistryBtnLink onClick={handleShow}>RSVP</RegistryBtnLink>
