@@ -19,13 +19,13 @@ const AccommodationsPages = () => {
         <Card.Body>
           <Card.Title className='accommodationsTitle'>Quattro Hotel</Card.Title>
           <Card.Text>
-            We have kindly booked a block. Reservations must be made before xyz date, click on the booking information tab below for more information.
+            We have kindly booked a block. Reservations must be made one month prior to arrival date in order to guarantee the price, click on the booking information tab below for more information.
           </Card.Text>
           <Accordion>
       <Accordion.Item eventKey="0">
         <Accordion.Header>Booking Information</Accordion.Header>
         <Accordion.Body>
-         In order to book under our block, please call 1 (800) 503-7262. Inform them you are booking for Mattieu Jacques and Brandi Martel's wedding.
+         In order to book under our block, please call 1 (800) 503-7262. Inform them you are booking for Mattieu Jacques and Brandi Martel's wedding. 
         </Accordion.Body>
       </Accordion.Item>
       <Accordion.Item eventKey="1">
@@ -58,13 +58,13 @@ const AccommodationsPages = () => {
         <Card.Body>
           <Card.Title className='accommodationsTitle'>Microtel Inn & Suites by Wyndham</Card.Title>
           <Card.Text>
-          We have kindly booked a block. Reservations must be made before xyz date, click on the booking information tab below for more information.
+          We have kindly booked a block. Reservations must be made two weeks prior to the wedding date in order to guarantee the price, click on the booking information tab below for more information.
           </Card.Text>
           <Accordion>
       <Accordion.Item eventKey="0">
         <Accordion.Header>Booking Information</Accordion.Header>
         <Accordion.Body>
-         In order to book under our block, please call 1 (800) xxx-xxxx. Inform them you are booking for Mattieu Jacques and Brandi Martel's wedding.
+         In order to book under our block, please call 1 (705) 450-2423. Inform them you are booking for Mattieu Jacques and Brandi Martel's wedding.
         </Accordion.Body>
       </Accordion.Item>
       <Accordion.Item eventKey="1">
@@ -73,13 +73,18 @@ const AccommodationsPages = () => {
         724 Great Northern Road,
         Sault Ste. Marie,
         Ontario
-        Phone: (705) 910-0180
         </Accordion.Body>
       </Accordion.Item>
       <Accordion.Item eventKey="2">
+        <Accordion.Header>Price</Accordion.Header>
+        <Accordion.Body>
+       <strong>Option 1</strong> - 2 Queen & sofa with Queen pullout = <strong>$156.60</strong> / night.
+        </Accordion.Body>
+      </Accordion.Item>
+      <Accordion.Item eventKey="3">
         <Accordion.Header>More Information</Accordion.Header>
         <Accordion.Body>
-       Here is more information about Microtel.
+       Breakfast is included.
         </Accordion.Body>
       </Accordion.Item>
     </Accordion>
