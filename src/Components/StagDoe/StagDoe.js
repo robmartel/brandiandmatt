@@ -27,7 +27,7 @@ const StagDoe = () => {
         <ListGroup.Item><span className='stagItems' >Location:</span> The Moose Lodge, 543 Trunk Rd, Sault Ste. Marie</ListGroup.Item>
         <ListGroup.Item><span className='stagItems' >Menu:</span> Spaghetti, meatballs, and salad</ListGroup.Item>
         <ListGroup.Item><span className='stagItems' >Music:</span> 360 Entertainment</ListGroup.Item>
-        <ListGroup.Item><span className='stagItems' >Price:</span> $30 (includes meal) or a support ticket for $20 (Alcohol sold separately)</ListGroup.Item>
+        <ListGroup.Item><span className='stagItems' >Price:</span> $35 (includes meal) or a support ticket for $20 (Alcohol sold separately)</ListGroup.Item>
         <ListGroup.Item><span className='stagItems' >Contact:</span> To get tickets contact: Jenny Martel 705-942-5418</ListGroup.Item>
 
 
