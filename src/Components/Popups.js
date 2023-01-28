@@ -15,7 +15,7 @@ const Popups = (props) => {
 
       <Modal.Body className="bg-danger" style={{ color: 'white', }}>
         <h3>Scent Free</h3>
-        <p>Please be aware that a couple individuals have severe allergies to scents. We ask that you refrain from wearing any <em>perfume</em>, <em>cologne</em>, <em>body sprays</em>, etc. Unfortunately, strong scents can cause these individuals to end up in the hospital. People who refuse to co-operate will be asked to leave. <br />If you are unsure, please do not hesitate to contact us. <br />Thank you for your consideration. </p>
+        <p>Please be aware that a couple individuals have severe allergies to scents. We ask that you refrain from wearing any <em>perfume</em>, <em>cologne</em>, <em>body sprays</em>, etc. Unfortunately, strong scents can cause these individuals to end up in the hospital. <br />If you are unsure, please do not hesitate to contact us. <br />Thank you for your consideration. </p>
       </Modal.Body>
 
       <Modal.Footer className="bg-danger">
