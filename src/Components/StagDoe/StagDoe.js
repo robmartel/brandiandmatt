@@ -18,12 +18,12 @@ const StagDoe = () => {
       <Card.Body className='stagBody'>
         <Card.Title className="stagTitle">The Moose Lodge</Card.Title>
         <Card.Text>
-          Come and support Brandi and Mathieu to celebrate their marriage. There will be a dj, full dinner with dessert, tons of auction items, games and of course booze! 
+          Come and support Brandi and Mathieu! There will be a dj, full dinner with dessert, tons of prizes, games and of course booze! 
         </Card.Text>
       </Card.Body>
       <ListGroup className="list-group-flush">
         <ListGroup.Item><span className='stagItems' >Date:</span> June 10, 2023</ListGroup.Item>
-        <ListGroup.Item><span className='stagItems' >Time:</span> 5 p.m. - 1 a.m.</ListGroup.Item>
+        <ListGroup.Item><span className='stagItems' >Time:</span> Doors open at 6 p.m., dinner at 7 p.m.</ListGroup.Item>
         <ListGroup.Item><span className='stagItems' >Location:</span> The Moose Lodge, 543 Trunk Rd, Sault Ste. Marie</ListGroup.Item>
         <ListGroup.Item><span className='stagItems' >Menu:</span> Spaghetti, meatballs, and salad</ListGroup.Item>
         <ListGroup.Item><span className='stagItems' >Music:</span> 360 Entertainment</ListGroup.Item>

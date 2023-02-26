@@ -120,8 +120,8 @@ const RsvpForm = () => {
           style={{ display: 'block' }}
         >
           <option value=''>Please select an answer</option>
-          <option value='yes'>Wouldn't miss it! (Yes)</option>
-          <option value='no'>Sorry, maybe next time (Hell no)</option>
+          <option value='yes'>Wouldn't miss it!</option>
+          <option value='no'>Decline, with regret</option>
         </Field>
         {touched.attending && errors.attending && (
           <small className='text-light'>
@@ -148,7 +148,7 @@ const RsvpForm = () => {
           style={{ display: 'block' }}
         >
           <option value=''>Please select an answer</option>
-          <option value='yes'>Yes, please add a plus one or few</option>
+          <option value='yes'>Yes, please add a plus one </option>
           <option value='no'>Just me!</option>
         </Field>
         {touched.plusOne && errors.plusOne && (
@@ -178,11 +178,10 @@ const RsvpForm = () => {
         >
           <option value=''>Please select an answer</option>
           <option value='one'>Just Me!</option>
-          <option value='two'>2</option>
-          <option value='three'>3</option>
-          <option value='four'>4</option>
-          <option value='five'>5</option>
-          <option value='six'>Too many!</option>
+          <option value='two'>Plus One</option>
+          <option value='three'>Plus One and One Child</option>
+          <option value='four'>Plus One and Two Children</option>
+          <option value='five'>Plus One and Three Children</option>
         </Field>
         {touched.guests && errors.guests && (
           <small className='text-light'>
